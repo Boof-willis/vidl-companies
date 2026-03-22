@@ -205,6 +205,8 @@
     // Display heading reveal
     var displayWrappers = document.querySelectorAll(".display-font-wrapper");
     displayWrappers.forEach(function (wrapper) {
+      // Observe the visible parent, not the hidden-translated element itself
+      var observeTarget = wrapper.closest(".display-heading-wrapper") || wrapper.parentElement || wrapper;
       var observer = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
@@ -215,9 +217,9 @@
             }
           });
         },
-        { threshold: 0.2 }
+        { threshold: 0.1 }
       );
-      observer.observe(wrapper);
+      observer.observe(observeTarget);
     });
   }
 
