@@ -72,13 +72,16 @@
   function initTransparentNav() {
     if (!document.body.classList.contains("is-home")) return;
     var navBar = document.querySelector(".nav-bar");
+    var navigation = document.querySelector(".navigation");
     if (!navBar) return;
 
     function onScroll() {
       if (window.scrollY > 50) {
         navBar.classList.add("nav-scrolled");
+        if (navigation) navigation.classList.add("nav-scrolled");
       } else {
         navBar.classList.remove("nav-scrolled");
+        if (navigation) navigation.classList.remove("nav-scrolled");
       }
     }
     window.addEventListener("scroll", onScroll, { passive: true });
