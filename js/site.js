@@ -1,6 +1,6 @@
 /**
  * VIDL Companies - Site JS
- * Replaces webflow.js + jQuery + custom inline scripts
+ * Site interactions, animations, and utilities
  * Dependencies: Lenis (loaded separately)
  */
 
@@ -86,6 +86,10 @@
     var bar = document.querySelector(".progress-bar");
     if (!bar) return;
     bar.style.width = "0%";
+    bar.style.position = "absolute";
+    bar.style.top = "0";
+    bar.style.left = "0";
+    bar.style.zIndex = "10";
     window.addEventListener("scroll", function () {
       var scrollTop = window.scrollY || document.documentElement.scrollTop;
       var docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -538,7 +542,7 @@
   function initPasswordPage() {
     var passForm = document.querySelector(".w-password-page form");
     if (!passForm) return;
-    // Remove Webflow auth endpoint, make it work locally
+    // Remove legacy auth endpoint
     passForm.removeAttribute("action");
   }
 
