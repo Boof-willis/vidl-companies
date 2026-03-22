@@ -94,7 +94,8 @@
     if (!bar) return;
     bar.style.width = "0%";
     bar.style.position = "absolute";
-    bar.style.top = "0";
+    bar.style.bottom = "0";
+    bar.style.top = "auto";
     bar.style.left = "0";
     bar.style.zIndex = "10";
     window.addEventListener("scroll", function () {
