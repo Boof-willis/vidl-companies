@@ -60,7 +60,7 @@
         setTimeout(function () {
           loader.style.display = "none";
         }, 500);
-      }, 1800);
+      }, 200);
     });
   }
 
