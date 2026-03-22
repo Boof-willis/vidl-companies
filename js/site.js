@@ -14,10 +14,14 @@
     html.classList.add("w-mod-touch");
   }
 
-  // ─── Lenis Smooth Scroll ───
+  // ─── Lenis Smooth Scroll (desktop only) ───
   let lenis;
   function initLenis() {
     if (typeof Lenis === "undefined") return;
+    // Disable Lenis entirely on touch/mobile — native momentum scroll is smoother
+    var isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0 || window.innerWidth <= 1024;
+    if (isMobile) return;
+
     lenis = new Lenis({
       lerp: 0.1,
       wheelMultiplier: 0.7,

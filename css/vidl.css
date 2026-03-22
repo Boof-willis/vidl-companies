@@ -5846,3 +5846,29 @@ figcaption {
 }
 
 
+
+/* ─── Mobile Nav Stability Fix ─── */
+/* Prevent nav-bar from creating its own fixed stacking context on mobile */
+@media screen and (max-width: 991px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .nav-bar {
+    position: relative;
+    inset: auto;
+    z-index: 2;
+  }
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 0%;
+  }
+}
