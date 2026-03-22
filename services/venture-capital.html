@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Venture Capital Relations | Vidl Companies</title>
+  <meta content="Vidl connects qualified investors with high-conviction retail and commercial real estate opportunities across Arizona — structuring partnerships for exponential growth and strategic exits." name="description">
+  <meta content="Venture Capital Relations | Vidl Companies" property="og:title">
+  <meta content="Vidl connects qualified investors with high-conviction retail and commercial real estate opportunities across Arizona — structuring partnerships for exponential growth and strategic exits." property="og:description">
+  <meta content="Venture Capital Relations | Vidl Companies" property="twitter:title">
+  <meta content="Vidl connects qualified investors with high-conviction retail and commercial real estate opportunities across Arizona — structuring partnerships for exponential growth and strategic exits." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/vidl-website.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../images/webclip.png" rel="apple-touch-icon">
+  <style>
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  /* smooth scrolling */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  /* cursor follow */
+@media (min-width: 1025px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #a02e2b;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, width, height, background-color, border-color;
+    transition:
+        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cursor-circle.hover-effect {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+    background-color: rgba(160, 46, 43, 0);
+    border-color: rgba(160, 46, 43, 0.4);
+}
+
+/* ─── Service Page Styles ─── */
+.service-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 800px;
+  overflow: hidden;
+}
+.service-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15,15,15,0.85) 0%, rgba(15,15,15,0.3) 60%, rgba(15,15,15,0.15) 100%);
+}
+.service-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 4rem 3rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.service-hero-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(253,253,253,0.5);
+  margin-bottom: 1rem;
+}
+.service-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fdfdfd;
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+}
+.service-hero-subtitle {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: rgba(253,253,253,0.7);
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+.service-body {
+  padding: 6rem 1rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.service-intro {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+.service-intro-label {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-color--neutral-darker, #666);
+}
+.service-intro-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--primary--charcoal, #1d1d1d);
+}
+.service-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+.service-feature {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(29,29,29,0.1);
+}
+.service-feature-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--text-color--neutral-darker, #666);
+  margin-bottom: 1rem;
+}
+.service-feature-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin: 0 0 0.75rem 0;
+}
+.service-feature-desc {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-color--neutral-darker, #666);
+  margin: 0;
+}
+.service-cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+.service-cta-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  min-height: 400px;
+}
+.service-cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15,15,15,0.7);
+}
+.service-cta-content {
+  position: relative;
+  z-index: 1;
+}
+.service-cta-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fdfdfd;
+  margin: 0 0 2rem 0;
+}
+@media (max-width: 991px) {
+  .service-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+  .service-features { grid-template-columns: 1fr; }
+  .service-hero-title { font-size: 2.2rem; }
+  .service-hero-content { padding: 3rem 1.5rem; }
+}
+@media (max-width: 479px) {
+  .service-hero-title { font-size: 1.8rem; }
+  .service-body { padding: 3rem 1rem; }
+}
+</style>
+</head>
+<body class="body-4">
+  <div class="main-wrapper">
+    <section id="Nav" class="navigation">
+      <article class="nav-bar">
+        <div class="progress-bar"></div>
+        <div class="container-nav">
+          <a href="../index.html" class="logo-link w-inline-block"><img loading="lazy" src="../images/Untitled-design-38.png" alt="Logo Image" class="small-logo original"><img loading="lazy" src="../images/Untitled-design-38.png" alt="Logo Image" class="small-logo white-overlap"></a>
+          <div class="nav-desktop-link-wrapper">
+            <a href="../index.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Home</div>
+                <div class="nav-text">Home</div>
+              </div>
+            </a>
+            <a href="../about.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">About</div>
+                <div class="nav-text">About</div>
+              </div>
+            </a>
+            <a href="../team.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Team</div>
+                <div class="nav-text">Team</div>
+              </div>
+            </a>
+            <a href="../developments.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Developments</div>
+                <div class="nav-text">Developments</div>
+              </div>
+            </a>
+            <a href="../contact.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Contact</div>
+                <div class="nav-text">Contact</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-menu">
+            <div class="button-menu-wrapper">
+              <div class="mobile-menu-text">MENU</div>
+              <div class="mobile-menu-text">CLOSE</div>
+            </div>
+          </div>
+          <div class="mobile-nav-content">
+            <div class="nav-link-mobile-list">
+              <div class="nav-link-mobile-item"><div class="nav-link-mobile-wrapper _1"><a href="../index.html" class="mobile-link">Home</a></div></div>
+              <div class="nav-link-mobile-item"><div class="nav-link-mobile-wrapper _3"><a href="../about.html" class="mobile-link">About</a></div></div>
+              <div class="nav-link-mobile-item"><div class="nav-link-mobile-wrapper _3"><a href="../team.html" class="mobile-link">Team</a></div></div>
+              <div class="nav-link-mobile-item"><div class="nav-link-mobile-wrapper _3"><a href="../developments.html" class="mobile-link">Developments</a></div></div>
+              <div class="nav-link-mobile-item"><div class="nav-link-mobile-wrapper _4"><a href="../contact.html" class="mobile-link">Contact</a></div></div>
+            </div>
+            <div class="mobile-contact-info-wrapper">
+              <div class="mobile-contact-info-item">
+                <div class="small-text neutral-darker">Email</div>
+                <a href="mailto:andrew@vidlcompanies.com" class="mobile-mail-link w-inline-block">
+                  <div class="medium-text black-text">andrew@vidlecompanies.com<br></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-shadow"></div>
+      </article>
+    </section>
+
+    <!-- Hero -->
+    <section class="service-hero">
+      <img src="../images/DJI_0386-Large_1.webp" alt="Venture Capital Relations" class="service-hero-img">
+      <div class="service-hero-overlay"></div>
+      <div class="service-hero-content">
+        <div class="service-hero-number">04 — Venture Capital</div>
+        <h1 class="service-hero-title">Venture Capital Relations</h1>
+        <p class="service-hero-subtitle">Connecting qualified investors with high-conviction commercial real estate and experiential brand opportunities across Arizona.</p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <section class="service-body">
+      <div class="service-intro">
+        <div class="service-intro-label">Our Expertise</div>
+        <div class="service-intro-text">Vidl's venture capital relations practice bridges the gap between ambitious experiential brands and the strategic capital they need to scale. Led by Managing Principal Andrew LaPorte — who co-founded a health and wellness boutique in Downtown Scottsdale — our team brings firsthand entrepreneurial experience to every investment thesis. We structure partnerships that align incentives, accelerate growth, and create clear pathways to value realization across Arizona's commercial real estate and experiential retail sectors.</div>
+      </div>
+
+      <div class="service-features">
+        <div class="service-feature">
+          <div class="service-feature-number">01</div>
+          <h3 class="service-feature-title">Strategic Broker Relations</h3>
+          <p class="service-feature-desc">We connect qualified investors with vetted opportunities across Greater Phoenix's commercial real estate and experiential retail landscape. Every deal is underwritten with institutional-grade analysis covering market dynamics, brand trajectory, and risk-adjusted return profiles.</p>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-number">02</div>
+          <h3 class="service-feature-title">Growth Capital &amp; Scaling</h3>
+          <p class="service-feature-desc">From seed-stage experiential concepts to established brands seeking expansion capital, we structure investment rounds that fuel sustainable growth. Our portfolio approach prioritizes brands positioned to capture market share in Arizona's rapidly expanding retail corridors.</p>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-number">03</div>
+          <h3 class="service-feature-title">Exit Strategy &amp; Value Realization</h3>
+          <p class="service-feature-desc">Every investment we facilitate is structured with a clear exit thesis. Whether through strategic acquisition, recapitalization, or portfolio sale, we position brands and assets for maximum value realization in Arizona's competitive commercial market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="service-cta-section">
+      <div class="service-cta-inner">
+        <img src="../images/IMG_3865-Large_1.webp" alt="" class="service-cta-bg">
+        <div class="service-cta-overlay"></div>
+        <div class="service-cta-content">
+          <h2 class="service-cta-heading">Looking for strategic capital partners?</h2>
+          <a href="../contact.html" class="secondary-button w-inline-block">
+            <div class="medium-text neutral-light">Get In Touch</div>
+            <div class="button-icon-circle white">
+              <div class="button-icon-wrapper">
+                <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <article id="Footer" class="footer">
+      <div class="container footer-contain">
+        <div class="_12-column-grid right-aligned fix-column">
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f1e-d7eb9f1b" class="footer-list-wrapper full-mob">
+            <a href="../index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="../images/VIDLCOMPANY-p-500.png 500w, ../images/VIDLCOMPANY-p-800.png 800w, ../images/VIDLCOMPANY-p-1080.png 1080w, ../images/VIDLCOMPANY-p-1600.png 1600w, ../images/VIDLCOMPANY-p-2000.png 2000w, ../images/VIDLCOMPANY.webp 4109w" alt="" src="../images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
+            <div class="small-text neutral">
+              <p class="paragraph medium-text left-aligned">Committed to Crafting the Extraordinary <br>Let's build something phenomenal together</p>
+            </div>
+          </div>
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f3e-d7eb9f1b" class="footer-list-wrapper mobile-footer hide">
+            <div class="margin-bottom extra-small">
+              <div class="small-text neutral">LOCATIONS</div>
+            </div>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 1</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 2</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="w-node-_012d193f-20fb-6142-eae0-939050fa9146-d7eb9f1b" class="div-block-4">
+            <div class="footer-list-wrapper mobile-footer">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SITEMAP</div>
+              </div>
+              <a href="../index.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Home</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="../portfolio.html" class="minimal-button hide w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Portfolio</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="../about.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">About</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="../team.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Team</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="../developments.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Developments</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="../contact.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Contact</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f57-d7eb9f1b" class="footer-list-wrapper left-space-ffooter">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SOCIAL</div>
+              </div>
+              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="../images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Instagram</div>
+              </a>
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="../images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Linkedin</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider dark margin-top"></div>
+      <div class="animation-up-0-1">
+        <div class="container no-padding-top-bot">
+          <div class="footer-bottom-bar mobile-footer-bottom">
+            <div class="footer-block mobile-footer-bottom">
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab849-d7eb9f1b" class="footer-block-left">
+                <a href="../privacy-policy.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Privacy Policy</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="../terms-of-service.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Terms of Service</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab854-d7eb9f1b" class="small-footer-text">&copy;2026. All right reserved</div>
+            </div>
+          </div>
+          <div class="footer-bottom-bar footer-disclaimer">
+            <div class="footer-block disclaimer-bottom">
+              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to Vidl's CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>

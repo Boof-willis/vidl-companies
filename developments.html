@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vidl Developments | Bespoke Experiential Real Estate Projects</title>
+  <meta content="Explore Vidl’s bespoke development projects, crafted to deliver world-class experiential real estate. Partner with us to bring your vision to life through client-specific, build-to-suit solutions." name="description">
+  <meta content="Vidl Developments | Bespoke Experiential Real Estate Projects" property="og:title">
+  <meta content="Explore Vidl’s bespoke development projects, crafted to deliver world-class experiential real estate. Partner with us to bring your vision to life through client-specific, build-to-suit solutions." property="og:description">
+  <meta content="Vidl Developments | Bespoke Experiential Real Estate Projects" property="twitter:title">
+  <meta content="Explore Vidl’s bespoke development projects, crafted to deliver world-class experiential real estate. Partner with us to bring your vision to life through client-specific, build-to-suit solutions." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/vidl-website.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+  body {
+    -webkit-font-smoothing: antialiased;
+  } 
+  /* smooth scrolling */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  /* cursor follow */
+@media (min-width: 1025px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #a02e2b;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, width, height, background-color, border-color;
+    transition:
+        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cursor-circle.hover-effect {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+    background-color: rgba(160, 46, 43, 0);
+    border-color: rgba(160, 46, 43, 0.4);
+}
+</style>
+</head>
+<body class="body-4">
+  <div class="main-wrapper">
+    <section id="Nav" class="navigation">
+      <article class="nav-bar">
+        <div class="progress-bar"></div>
+        <div class="container-nav">
+          <a href="index.html" class="logo-link w-inline-block"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo original"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo white-overlap"></a>
+          <div class="nav-desktop-link-wrapper">
+            <a href="index.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Home</div>
+                <div class="nav-text">Home</div>
+              </div>
+            </a>
+            <a href="about.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">About</div>
+                <div class="nav-text">About</div>
+              </div>
+            </a>
+            <a href="team.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Team</div>
+                <div class="nav-text">Team</div>
+              </div>
+            </a>
+            <a href="developments.html" aria-current="page" class="nav-link-desktop w-inline-block w--current">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Developments</div>
+                <div class="nav-text">Developments</div>
+              </div>
+            </a>
+            <a href="contact.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Contact</div>
+                <div class="nav-text">Contact</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-menu">
+            <div class="button-menu-wrapper">
+              <div class="mobile-menu-text">MENU</div>
+              <div class="mobile-menu-text">CLOSE</div>
+            </div>
+          </div>
+          <div class="mobile-nav-content">
+            <div class="nav-link-mobile-list">
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _1">
+                  <a href="index.html" class="mobile-link">Home</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="about.html" class="mobile-link">About</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="team.html" class="mobile-link">Team</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="developments.html" aria-current="page" class="mobile-link w--current">Developments</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _4">
+                  <a href="contact.html" class="mobile-link">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-contact-info-wrapper">
+              <div class="mobile-contact-info-item">
+                <div class="small-text neutral-darker">Email</div>
+                <a href="mailto:info@vestal.com?subject=Hello" class="mobile-mail-link w-inline-block">
+                  <div class="medium-text black-text">andrew@vidlecompanies.com<br></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-shadow"></div>
+      </article>
+    </section>
+    <section class="dev-hero-section">
+      <div id="bgVideo" class="dev-content-wrapper">
+        <div class="dev-hero-split"><img src="images/Vidl-Dev.png" loading="eager" sizes="(max-width: 479px) 87vw, 314px" srcset="images/Vidl-Dev-p-500.png 500w, images/Vidl-Dev.png 628w" alt="" class="dev-vidl-logo">
+          <div class="text-block-5">X</div><img src="images/Urbnphx.png" loading="eager" sizes="(max-width: 479px) 87vw, 391px" srcset="images/Urbnphx-p-500.png 500w, images/Urbnphx.png 782w" alt="" class="dev-urban-logo">
+        </div>
+      </div>
+      <div class="hero-image-wrapper"><img src="images/Untitled-design-12-1.png" loading="eager" sizes="100vw" srcset="images/Untitled-design-12-1-p-500.png 500w, images/Untitled-design-12-1-p-800.png 800w, images/Untitled-design-12-1-p-1080.png 1080w, images/Untitled-design-12-1-p-1600.png 1600w, images/Untitled-design-12-1-p-2000.png 2000w, images/Untitled-design-12-1-p-2600.png 2600w, images/Untitled-design-12-1.png 3024w" alt="" class="hero-image"></div>
+    </section>
+    <section>
+      <div class="container intro">
+        <div class="section-content dev-content">
+          <div class="section-header-wrapper dev-text-content">
+            <div class="_12-column-grid">
+              <div id="w-node-_4adc34ed-b402-df0a-c5b8-478b239a77f7-9af5c160" class="section-header-wrapper">
+                <div id="w-node-_4adc34ed-b402-df0a-c5b8-478b239a77fc-9af5c160" style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
+                  <div class="extra-large-text">Vīdl Development X URBNPHX - Actively curating bespoke development projects to bring world class experiencial real estate to Community.<br><br>Build to Suit Projects. Client specific. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="-webkit-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-fade-in">
+            <div class="about-header-wrapper">
+              <div class="image-reveal-wrapper">
+                <div class="heading-image-wrapper">
+                  <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);display:block" class="slide left"></div>
+                  <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);display:block" class="slide right"></div><img loading="lazy" src="images/047A6100-1.png" alt="" class="dev-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div style="-webkit-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-fade-in">
+        <div class="image-wrapper-content">
+          <div style="-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-up-0-1">
+            <div class="center-align">
+              <div class="label-wrapper">
+                <div class="label-dot white"></div>
+                <div class="small-text neutral-light">Bringing Visions to Life</div>
+              </div>
+            </div>
+          </div>
+          <div style="-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-up-0-2">
+            <div class="margin-bottom medium">
+              <div class="display-heading-wrapper">
+                <div class="overflow-hide">
+                  <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="display-font-wrapper">
+                    <h2 class="heading"> Partner with Us to Bring Your Vision to Life</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="secondary-button w-inline-block">
+              <div class="medium-text neutral-light">Get In Touch</div>
+              <div class="button-icon-circle white">
+                <div class="button-icon-wrapper">
+                  <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                  <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="background-image-wrapper">
+            <div class="image-overlay"></div><img sizes="100vw" srcset="images/IMG_3658-Large_1IMG_3658-Large.webp 500w, images/IMG_3658-Large_1IMG_3658-Large.webp 800w, images/IMG_3658-Large_1IMG_3658-Large.webp 1080w, images/IMG_3658-Large_1.webp 1280w" alt="" src="images/IMG_3658-Large_1.webp" loading="eager" class="background-image">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-6">
+      <div class="divider add-margin-top"></div>
+      <div class="container">
+        <div class="section-content">
+          <div class="section-header-wrapper">
+            <div class="_12-column-grid">
+              <div id="w-node-_59f87985-57b0-cff0-7fd1-6ac429334ea6-9af5c160" class="animation-up-0-1">
+                <div class="label-wrapper">
+                  <div class="label-dot"></div>
+                  <div class="bullet-text">Clients</div>
+                </div>
+              </div>
+              <div id="w-node-_59f87985-57b0-cff0-7fd1-6ac429334eab-9af5c160" style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
+                <div class="extra-large-text">Vestal collaborates with forward-thinking brands, agencies, and innovators across industries, including technology, entertainment, architecture, and product design, to bring visionary ideas to life.</div>
+              </div>
+            </div>
+          </div>
+          <div class="_12-column-grid">
+            <div id="w-node-_59f87985-57b0-cff0-7fd1-6ac429334eaf-9af5c160" class="logos-wrapper">
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-1">
+                <div class="logo-wrapper"><img src="images/1_1.webp" loading="lazy" sizes="100vw" srcset="images/1_11.webp 500w, images/1_1.webp 613w" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
+                <div class="logo-wrapper"><img src="images/2_1.webp" loading="lazy" sizes="100vw" srcset="images/2_12.webp 500w, images/2_1.webp 613w" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-3">
+                <div class="logo-wrapper"><img src="images/3.webp" loading="lazy" sizes="100vw" srcset="images/3-p-500.png 500w, images/3.webp 613w" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-4">
+                <div class="logo-wrapper"><img src="images/Untitled-design-34.png" loading="lazy" sizes="100vw" srcset="images/Untitled-design-34-p-500.png 500w, images/Untitled-design-34.png 615w" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-1">
+                <div class="logo-wrapper"><img src="images/Untitled-design-35.png" loading="lazy" sizes="100vw" srcset="images/Untitled-design-35-p-500.png 500w, images/Untitled-design-35.png 615w" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
+                <div class="logo-wrapper"><img src="images/6.webp" loading="lazy" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-3">
+                <div class="logo-wrapper"><img src="images/7.webp" loading="lazy" alt="" class="logo-image"></div>
+              </div>
+              <div style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-4">
+                <div class="logo-wrapper"><img src="images/Untitled-design-36.png" loading="lazy" sizes="100vw" srcset="images/Untitled-design-36-p-500.png 500w, images/Untitled-design-36.png 615w" alt="" class="logo-image"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <article id="Footer" class="footer">
+      <div class="container footer-contain">
+        <div class="_12-column-grid right-aligned fix-column">
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f1e-d7eb9f1b" class="footer-list-wrapper full-mob">
+            <a href="index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="" src="images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
+            <div class="small-text neutral">
+              <p class="paragraph medium-text left-aligned">Committed to Crafting the Extraordinary <br>Let’s build something phenomenal together</p>
+            </div>
+          </div>
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f3e-d7eb9f1b" class="footer-list-wrapper mobile-footer hide">
+            <div class="margin-bottom extra-small">
+              <div class="small-text neutral">LOCATIONS</div>
+            </div>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 1</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 2</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="w-node-_012d193f-20fb-6142-eae0-939050fa9146-d7eb9f1b" class="div-block-4">
+            <div class="footer-list-wrapper mobile-footer">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SITEMAP</div>
+              </div>
+              <a href="index.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Home</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="portfolio.html" class="minimal-button hide w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Portfolio</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="about.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">About</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="team.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Team</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="developments.html" aria-current="page" class="minimal-button w-inline-block w--current">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Developments</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="contact.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Contact</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f57-d7eb9f1b" class="footer-list-wrapper left-space-ffooter">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SOCIAL</div>
+              </div>
+              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Instagram</div>
+              </a>
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Linkedin</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider dark margin-top"></div>
+      <div class="animation-up-0-1">
+        <div class="container no-padding-top-bot">
+          <div class="footer-bottom-bar mobile-footer-bottom">
+            <div class="footer-block mobile-footer-bottom">
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab849-d7eb9f1b" class="footer-block-left">
+                <a href="privacy-policy.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Privacy Policy</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="terms-of-service.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Terms of Service</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab854-d7eb9f1b" class="small-footer-text">©2026. All right reserved</div>
+            </div>
+          </div>
+          <div class="footer-bottom-bar footer-disclaimer">
+            <div class="footer-block disclaimer-bottom">
+              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to Vīdl’s CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+  
+  <script src="js/site.js"></script>
+</body>
+</html>

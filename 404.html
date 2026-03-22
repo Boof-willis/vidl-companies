@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Not Found</title>
+  <meta content="Not Found" property="og:title">
+  <meta content="Not Found" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/vidl-website.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+  body {
+    -webkit-font-smoothing: antialiased;
+  } 
+  /* smooth scrolling */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  /* cursor follow */
+@media (min-width: 1025px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #a02e2b;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, width, height, background-color, border-color;
+    transition:
+        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cursor-circle.hover-effect {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+    background-color: rgba(160, 46, 43, 0);
+    border-color: rgba(160, 46, 43, 0.4);
+}
+</style>
+</head>
+<body>
+  <div class="utility-page-wrap">
+    <div class="utility-page-content">
+      <div class="margin-bottom small">
+        <div class="medium-text neutral-darker">Lost Page</div>
+      </div>
+      <div class="_404-lottie-wrapper">
+        <div class="_404-lottie" data-animation-type="lottie" data-src="https://uploads-ssl.webflow.com/6685c3b150e10e73a6cd57b0/66a5020adc623da81dc8d610_lottieflow-404-12-9-000000-easey%20(1).json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="2.75" data-duration="0"></div>
+      </div>
+      <div class="medium-text neutral-darker">Oops! The page you&#x27;re looking for can&#x27;t be found. Check out our home page or explore our latest projects to find what you&#x27;re looking for. </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+  
+  <script src="js/site.js"></script>
+</body>
+</html>

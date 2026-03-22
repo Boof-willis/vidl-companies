@@ -1,0 +1,650 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Team</title>
+  <meta content="Team" property="og:title">
+  <meta content="Team" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/vidl-website.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+  body {
+    -webkit-font-smoothing: antialiased;
+  } 
+  /* smooth scrolling */
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  /* cursor follow */
+@media (min-width: 1025px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #a02e2b;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, width, height, background-color, border-color;
+    transition:
+        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cursor-circle.hover-effect {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+    background-color: rgba(160, 46, 43, 0);
+    border-color: rgba(160, 46, 43, 0.4);
+}
+
+/* ─── Team Page ─── */
+.vidl-team-section {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 10rem 2rem 6rem;
+}
+.vidl-team-header {
+  margin-bottom: 6rem;
+  border-bottom: 1px solid rgba(29,29,29,0.1);
+  padding-bottom: 2rem;
+}
+.vidl-team-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin: 1rem 0 0 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.vidl-team-leadership {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-bottom: 6rem;
+}
+.vidl-team-member {
+  display: grid;
+  grid-template-columns: 4.5fr 7.5fr;
+  gap: 5rem;
+  align-items: start;
+}
+.vidl-team-member:nth-child(even) {
+  grid-template-columns: 7.5fr 4.5fr;
+}
+.vidl-team-member:nth-child(even) .vidl-team-photo-wrap {
+  grid-column: 2;
+  grid-row: 1;
+}
+.vidl-team-member:nth-child(even) .vidl-team-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.vidl-team-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.vidl-team-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(15%);
+  transition: filter 0.6s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.vidl-team-photo-wrap:hover .vidl-team-photo {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.vidl-team-text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.vidl-team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.vidl-team-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.vidl-team-role {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-color--neutral-darker, #666);
+  margin-bottom: 1rem;
+}
+.vidl-team-excerpt {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-color--neutral-darker, #444);
+  margin: 0.5rem 0 1.5rem 0;
+}
+.vidl-team-bio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary--charcoal, #1d1d1d);
+  background: none;
+  border: none;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.vidl-team-bio-toggle:hover {
+  border-color: var(--primary--charcoal, #1d1d1d);
+}
+.vidl-team-bio-toggle svg {
+  transition: transform 0.3s ease;
+}
+.vidl-team-bio-toggle.is-open svg {
+  transform: rotate(180deg);
+}
+.vidl-team-bio-toggle.is-open span {
+  display: none;
+}
+.vidl-team-bio-toggle.is-open::before {
+  content: 'Close';
+}
+.vidl-team-bio {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.5s ease,
+              margin 0.5s ease;
+  margin-top: 0;
+}
+.vidl-team-bio.is-open {
+  max-height: 1500px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+.vidl-team-bio p {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-color--neutral-darker, #555);
+  margin: 0 0 1.25rem 0;
+}
+.vidl-team-bio p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+.vidl-team-linkedin {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary--charcoal, #1d1d1d);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary--charcoal, #1d1d1d);
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.vidl-team-linkedin:hover {
+  opacity: 0.6;
+}
+
+/* Additional team members (compact) */
+.vidl-team-additional {
+  border-top: 1px solid rgba(29,29,29,0.1);
+  padding-top: 4rem;
+  max-width: 100%;
+}
+.vidl-team-member-compact {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.vidl-team-compact-placeholder {
+  width: 120px;
+  height: 120px;
+  background: var(--primary--sand, #f4f4f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color--neutral-darker, #999);
+}
+.vidl-team-name-sm {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.01em;
+}
+.vidl-team-role-sm {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-color--neutral-darker, #666);
+  margin-bottom: 1rem;
+}
+.vidl-team-excerpt-sm {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-color--neutral-darker, #555);
+  margin: 0.5rem 0 1rem 0;
+}
+
+@media (max-width: 991px) {
+  .vidl-team-member {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .vidl-team-member:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .vidl-team-section {
+    padding: 8rem 1rem 4rem;
+  }
+  .vidl-team-heading {
+    font-size: 2rem;
+  }
+  .vidl-team-leadership {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .vidl-team-member,
+  .vidl-team-member:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .vidl-team-photo-wrap {
+    width: 85%;
+  }
+  .vidl-team-member-compact {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .vidl-team-compact-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+}
+</style>
+</head>
+<body>
+  <section class="main-wrapper">
+    <section id="Nav" class="navigation">
+      <article class="nav-bar">
+        <div class="progress-bar"></div>
+        <div class="container-nav">
+          <a href="index.html" class="logo-link w-inline-block"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo original"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo white-overlap"></a>
+          <div class="nav-desktop-link-wrapper">
+            <a href="index.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Home</div>
+                <div class="nav-text">Home</div>
+              </div>
+            </a>
+            <a href="about.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">About</div>
+                <div class="nav-text">About</div>
+              </div>
+            </a>
+            <a href="team.html" aria-current="page" class="nav-link-desktop w-inline-block w--current">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Team</div>
+                <div class="nav-text">Team</div>
+              </div>
+            </a>
+            <a href="developments.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Developments</div>
+                <div class="nav-text">Developments</div>
+              </div>
+            </a>
+            <a href="contact.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Contact</div>
+                <div class="nav-text">Contact</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-menu">
+            <div class="button-menu-wrapper">
+              <div class="mobile-menu-text">MENU</div>
+              <div class="mobile-menu-text">CLOSE</div>
+            </div>
+          </div>
+          <div class="mobile-nav-content">
+            <div class="nav-link-mobile-list">
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _1">
+                  <a href="index.html" class="mobile-link">Home</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="about.html" class="mobile-link">About</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="team.html" aria-current="page" class="mobile-link w--current">Team</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="developments.html" class="mobile-link">Developments</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _4">
+                  <a href="contact.html" class="mobile-link">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-contact-info-wrapper">
+              <div class="mobile-contact-info-item">
+                <div class="small-text neutral-darker">Email</div>
+                <a href="mailto:info@vestal.com?subject=Hello" class="mobile-mail-link w-inline-block">
+                  <div class="medium-text black-text">andrew@vidlecompanies.com<br></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-shadow"></div>
+      </article>
+    </section>
+    <section class="vidl-team-section">
+      <div class="vidl-team-header">
+        <div class="label-wrapper">
+          <div class="label-dot"></div>
+          <div class="bullet-text">Our Team</div>
+        </div>
+        <h1 class="vidl-team-heading">The people behind the platform.</h1>
+      </div>
+
+      <div class="vidl-team-leadership">
+        <div class="vidl-team-member animation-left-0-1">
+          <div class="vidl-team-photo-wrap">
+            <img src="images/Untitled-design-9.jpg" loading="lazy" alt="Andrew LaPorte" class="vidl-team-photo">
+          </div>
+          <div class="vidl-team-text">
+            <div class="vidl-team-info">
+              <h2 class="vidl-team-name">Andrew LaPorte</h2>
+              <div class="vidl-team-role">Founder &amp; CEO</div>
+              <p class="vidl-team-excerpt">Andrew LaPorte is the Founder and CEO of Vidl Companies, a real estate advisory and development platform focused on experiential brands, strategic growth, and high-impact placements across premier markets.</p>
+              <button class="vidl-team-bio-toggle" data-target="bio-andrew">
+                <span>Read Full Bio</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="bio-andrew" class="vidl-team-bio">
+              <p>He has built a reputation as a trusted operator and advisor to founders, developers, and brands seeking to scale with intention. Over the course of his career, Andrew has been involved in nearly $1 billion in transactional volume, representing and curating tenancy across high-profile assets nationwide while helping brands expand through strategic real estate execution.</p>
+              <p>Through Vidl, Andrew leads initiatives across brokerage, boutique development, project strategy, and brand advisory, working at the intersection of real estate, business growth, and experiential retail. His approach is highly selective, focused on aligning the right brands, locations, and partnerships to create long-term value.</p>
+              <p>In addition to Vidl, Andrew is a co-founder of Sculp, a category-defining body sculpting concept based in Old Town Scottsdale, where he oversees growth strategy, operations, and brand positioning alongside his partner, Jaini. He is also actively involved in multiple ventures spanning wellness, development, and brand expansion, all centered around building scalable, experience-driven businesses.</p>
+              <p>Andrew is known for his ability to identify opportunity, structure deals, and bring the right people together to execute at a high level. He leads with discipline, clarity, and a strong focus on performance, while maintaining a deep commitment to the relationships that drive long-term success.</p>
+              <p>Based in Arizona, Andrew values family, faith, and living with intention. Outside of business, he is deeply connected to the motorsports community and spends his time driving and building within the enthusiast space.</p>
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="vidl-team-linkedin">Connect on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="vidl-team-member animation-left-0-2">
+          <div class="vidl-team-photo-wrap">
+            <img src="images/jaini-doffing.webp" loading="lazy" alt="Jaini Doffing" class="vidl-team-photo">
+          </div>
+          <div class="vidl-team-text">
+            <div class="vidl-team-info">
+              <h2 class="vidl-team-name">Jaini Doffing</h2>
+              <div class="vidl-team-role">Partner &amp; Chief Strategy Officer</div>
+              <p class="vidl-team-excerpt">Jaini Doffing serves as a Partner and Chief Strategy Officer at Vidl Companies, where she plays a key role in shaping the firm's strategic direction, partnerships, and client alignment.</p>
+              <button class="vidl-team-bio-toggle" data-target="bio-jaini">
+                <span>Read Full Bio</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="bio-jaini" class="vidl-team-bio">
+              <p>She is actively involved in evaluating business opportunities, refining deal strategy, and works directly alongside executive leadership to position Vidl for long-term growth across its portfolio. Jaini brings a strong focus on identifying and aligning with high-quality brands, helping guide client relationships that fit Vidl's vision for scalable, experience-driven real estate.</p>
+              <p>Her involvement spans strategic planning, brand alignment, and business development, ensuring that each engagement is intentional, well-positioned, and built for growth.</p>
+              <a href="https://www.linkedin.com/in/jaini-doffing-6b7511167/" target="_blank" class="vidl-team-linkedin">Connect on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vidl-team-additional">
+        <div class="vidl-team-member-compact animation-left-0-3">
+          <div class="vidl-team-compact-placeholder">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div class="vidl-team-text">
+            <div class="vidl-team-info">
+              <h3 class="vidl-team-name-sm">Ty Brewster, CFE</h3>
+              <div class="vidl-team-role-sm">Designated Broker | FranReal, LLC</div>
+              <p class="vidl-team-excerpt-sm">Ty Brewster serves as the Designated Broker for Vidl Companies through FranReal, LLC, providing oversight, compliance, and regulatory guidance across all brokerage activities.</p>
+              <button class="vidl-team-bio-toggle" data-target="bio-ty">
+                <span>Read Full Bio</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+            </div>
+            <div id="bio-ty" class="vidl-team-bio">
+              <p>All real estate agents engaged with Vidl Companies operate under the direction of CEO, Andrew LaPorte, and in coordination with Ty Brewster as Designated Broker to ensure best-in-class compliance, operational integrity, and alignment with all regulatory requirements.</p>
+              <a href="https://www.linkedin.com/in/ty-brewster-cfe-99152b100/" target="_blank" class="vidl-team-linkedin">Connect on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <article id="Footer" class="footer">
+      <div class="container footer-contain">
+        <div class="_12-column-grid right-aligned fix-column">
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f1e-d7eb9f1b" class="footer-list-wrapper full-mob">
+            <a href="index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="" src="images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
+            <div class="small-text neutral">
+              <p class="paragraph medium-text left-aligned">Committed to Crafting the Extraordinary <br>Let’s build something phenomenal together</p>
+            </div>
+          </div>
+          <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f3e-d7eb9f1b" class="footer-list-wrapper mobile-footer hide">
+            <div class="margin-bottom extra-small">
+              <div class="small-text neutral">LOCATIONS</div>
+            </div>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 1</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Location 2</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="w-node-_012d193f-20fb-6142-eae0-939050fa9146-d7eb9f1b" class="div-block-4">
+            <div class="footer-list-wrapper mobile-footer">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SITEMAP</div>
+              </div>
+              <a href="index.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Home</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="portfolio.html" class="minimal-button hide w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Portfolio</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="about.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">About</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="team.html" aria-current="page" class="minimal-button w-inline-block w--current">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Team</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="developments.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Developments</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="contact.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Contact</div>
+                    <div class="underline">
+                      <div class="line-fill"></div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f57-d7eb9f1b" class="footer-list-wrapper left-space-ffooter">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SOCIAL</div>
+              </div>
+              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Instagram</div>
+              </a>
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+                <div class="button-link-text whiite">Linkedin</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider dark margin-top"></div>
+      <div class="animation-up-0-1">
+        <div class="container no-padding-top-bot">
+          <div class="footer-bottom-bar mobile-footer-bottom">
+            <div class="footer-block mobile-footer-bottom">
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab849-d7eb9f1b" class="footer-block-left">
+                <a href="privacy-policy.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Privacy Policy</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="terms-of-service.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Terms of Service</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab854-d7eb9f1b" class="small-footer-text">©2026. All right reserved</div>
+            </div>
+          </div>
+          <div class="footer-bottom-bar footer-disclaimer">
+            <div class="footer-block disclaimer-bottom">
+              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to Vīdl’s CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+  
+  <script src="js/site.js"></script>
+</body>
+</html>
