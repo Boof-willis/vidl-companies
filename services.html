@@ -1,0 +1,639 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Services | Vidl Companies &mdash; Strategic Real Estate &amp; Brand Advisory</title>
+  <meta content="Vidl Companies provides tenant representation, site selection, brand expansion advisory, and boutique development services for experiential brands across Arizona and national markets." name="description">
+  <meta content="Services | Vidl Companies &mdash; Strategic Real Estate &amp; Brand Advisory" property="og:title">
+  <meta content="Vidl Companies provides tenant representation, site selection, brand expansion advisory, and boutique development services for experiential brands across Arizona and national markets." property="og:description">
+  <meta content="Services | Vidl Companies &mdash; Strategic Real Estate &amp; Brand Advisory" property="twitter:title">
+  <meta content="Vidl Companies provides tenant representation, site selection, brand expansion advisory, and boutique development services for experiential brands across Arizona and national markets." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="canonical" href="https://vidl-companies.pages.dev/services.html">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/base.css" rel="stylesheet" type="text/css">
+  <link href="css/vidl.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  html.lenis {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+@media (min-width: 1025px) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+}
+.cursor-circle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: #a02e2b;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, width, height, background-color, border-color;
+    transition:
+        width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.cursor-circle.hover-effect {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+    background-color: rgba(160, 46, 43, 0);
+    border-color: rgba(160, 46, 43, 0.4);
+}
+
+/* ─── Services Page ─── */
+.vidl-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding: 2rem 0 6rem;
+}
+.vidl-service-block {
+  display: grid;
+  grid-template-columns: 5.5fr 6.5fr;
+  gap: 5rem;
+  align-items: center;
+}
+.vidl-service-block:nth-child(even) {
+  grid-template-columns: 6.5fr 5.5fr;
+}
+.vidl-service-block:nth-child(even) .vidl-service-image-wrap {
+  grid-column: 2;
+  grid-row: 1;
+}
+.vidl-service-block:nth-child(even) .vidl-service-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+.vidl-service-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+.vidl-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition: filter 0.6s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.vidl-service-image-wrap:hover .vidl-service-image {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.vidl-service-content {
+  display: flex;
+  flex-direction: column;
+}
+.vidl-service-block-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(29, 29, 29, 0.35);
+  margin-bottom: 0.75rem;
+}
+.vidl-service-block-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin-bottom: 1.25rem;
+}
+.vidl-service-block-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-color--neutral-darker, #666);
+  margin-bottom: 0.75rem;
+}
+.vidl-service-block-text:last-child {
+  margin-bottom: 0;
+}
+.vidl-service-includes {
+  margin-top: 1rem;
+}
+.vidl-service-includes-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin-bottom: 0.5rem;
+}
+.vidl-service-includes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.vidl-service-includes-list li {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-color--neutral-darker, #666);
+  padding: 0.25rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.vidl-service-includes-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--primary--charcoal, #1d1d1d);
+  border-radius: 50%;
+}
+.vidl-service-note {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--primary--charcoal, #1d1d1d);
+}
+
+/* ─── CTA Button ─── */
+.vidl-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--primary--charcoal, #1d1d1d);
+  background: transparent;
+  border: 1px solid var(--primary--charcoal, #1d1d1d);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.vidl-cta-button:hover {
+  background-color: var(--primary--charcoal, #1d1d1d);
+  color: #fdfdfd;
+}
+.vidl-cta-button svg {
+  transition: transform 0.3s ease;
+}
+.vidl-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .vidl-service-block {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .vidl-service-block:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .vidl-service-block:nth-child(even) .vidl-service-image-wrap {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .vidl-service-block:nth-child(even) .vidl-service-content {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .vidl-service-image-wrap {
+    aspect-ratio: 16 / 9;
+  }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Services | Vidl Companies",
+  "description": "Vidl Companies provides tenant representation, site selection, brand expansion advisory, and boutique development services for experiential brands.",
+  "url": "https://vidl-companies.pages.dev/services.html",
+  "mainEntity": {
+    "@id": "https://vidl-companies.pages.dev/#organization"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://vidl-companies.pages.dev/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://vidl-companies.pages.dev/services.html"
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+  <div class="main-wrapper">
+    <section id="Nav" class="navigation">
+      <article class="nav-bar">
+        <div class="progress-bar"></div>
+        <div class="container-nav">
+          <a href="index.html" class="logo-link w-inline-block"><img loading="lazy" src="images/Untitled-design-38.png" alt="Vidl Companies Logo" class="small-logo original"><img loading="lazy" src="images/Untitled-design-38.png" alt="Vidl Companies Logo" class="small-logo white-overlap"></a>
+          <div class="nav-desktop-link-wrapper">
+            <a href="index.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Home</div>
+                <div class="nav-text">Home</div>
+              </div>
+            </a>
+            <a href="about.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">About</div>
+                <div class="nav-text">About</div>
+              </div>
+            </a>
+            <a href="team.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Team</div>
+                <div class="nav-text">Team</div>
+              </div>
+            </a>
+            <a href="developments.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Developments</div>
+                <div class="nav-text">Developments</div>
+              </div>
+            </a>
+            <a href="contact.html" class="nav-link-desktop w-inline-block">
+              <div class="nav-text-wrapper">
+                <div class="nav-text">Contact</div>
+                <div class="nav-text">Contact</div>
+              </div>
+            </a>
+          </div>
+          <div class="button-menu">
+            <div class="button-menu-wrapper">
+              <div class="mobile-menu-text">MENU</div>
+              <div class="mobile-menu-text">CLOSE</div>
+            </div>
+          </div>
+          <div class="mobile-nav-content">
+            <div class="nav-link-mobile-list">
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _1">
+                  <a href="index.html" class="mobile-link">Home</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="about.html" class="mobile-link">About</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="team.html" class="mobile-link">Team</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _3">
+                  <a href="developments.html" class="mobile-link">Developments</a>
+                </div>
+              </div>
+              <div class="nav-link-mobile-item">
+                <div class="nav-link-mobile-wrapper _4">
+                  <a href="contact.html" class="mobile-link">Contact</a>
+                </div>
+              </div>
+            </div>
+            <div class="mobile-contact-info-wrapper">
+              <div class="mobile-contact-info-item">
+                <div class="small-text neutral-darker">Email</div>
+                <a href="mailto:andrew@vidlcompanies.com?subject=Hello" class="mobile-mail-link w-inline-block">
+                  <div class="medium-text black-text">andrew@vidlcompanies.com<br></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-shadow"></div>
+      </article>
+    </section>
+
+    <!-- HEADER -->
+    <section>
+      <div class="container intro">
+        <div class="section-content stretch-content">
+          <div class="editorial-grid">
+            <div class="editorial-col-left animation-up-0-1">
+              <div class="margin-bottom small">
+                <div class="medium-text black-text">Our Services</div>
+              </div>
+            </div>
+            <div class="editorial-col-right animation-left-0-2">
+              <h1 class="extra-large-text dark-text">Strategic Real Estate &amp; Brand Advisory</h1>
+              <div class="medium-text" style="margin-top:1.25rem;">We provide focused, high-level services designed to support brand growth, real estate performance, and long-term positioning.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <div class="container">
+        <div class="section-content">
+          <div style="width:0%" class="divider"></div>
+          
+          <div class="vidl-services-list">
+            <!-- Tenant Representation -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-image-wrap">
+              <img src="images/IMG_3870-opt_1.webp" loading="lazy" alt="Tenant Representation" class="vidl-service-image">
+            </div>
+            <div class="vidl-service-content">
+              <div class="vidl-service-block-number">01</div>
+              <h2 class="vidl-service-block-title">Tenant Representation</h2>
+              <p class="vidl-service-block-text">We represent brands in securing retail locations that align with their identity, customer base, and growth trajectory.</p>
+              <p class="vidl-service-block-text">From market analysis through lease execution, we ensure each placement supports both immediate performance and long-term brand equity.</p>
+            </div>
+          </div>
+
+          <!-- Site Selection -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-image-wrap">
+              <img src="images/IMG_3918-Large_1.webp" loading="lazy" alt="Site Selection and Market Strategy" class="vidl-service-image">
+            </div>
+            <div class="vidl-service-content">
+              <div class="vidl-service-block-number">02</div>
+              <h2 class="vidl-service-block-title">Site Selection &amp; Market Strategy</h2>
+              <p class="vidl-service-block-text">We identify and evaluate locations based on data, co-tenancy, traffic patterns, and brand alignment.</p>
+              <p class="vidl-service-block-text">Every site is selected with intention, not convenience.</p>
+            </div>
+          </div>
+
+          <!-- Brand Expansion -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-image-wrap">
+              <img src="images/IMG_3846-Large_1.webp" loading="lazy" alt="Brand Expansion Advisory" class="vidl-service-image">
+            </div>
+            <div class="vidl-service-content">
+              <div class="vidl-service-block-number">03</div>
+              <h2 class="vidl-service-block-title">Brand Expansion Advisory</h2>
+              <p class="vidl-service-block-text">We work directly with ownership teams to develop structured expansion strategies.</p>
+              <div class="vidl-service-includes">
+                <div class="vidl-service-includes-title">This includes:</div>
+                <ul class="vidl-service-includes-list">
+                  <li>Market prioritization</li>
+                  <li>Rollout planning</li>
+                  <li>Location targeting</li>
+                  <li>Growth pacing aligned with capital and operations</li>
+                </ul>
+              </div>
+              <div class="vidl-service-note">We frequently engage on a consulting or retainer basis to guide brands through multi-market expansion.</div>
+            </div>
+          </div>
+
+          <!-- Development -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-image-wrap">
+              <img src="images/Untitled-design-12-1-p-1080.png" loading="lazy" alt="Boutique Development and Curation" class="vidl-service-image">
+            </div>
+            <div class="vidl-service-content">
+              <div class="vidl-service-block-number">04</div>
+              <h2 class="vidl-service-block-title">Boutique Development &amp; Curation</h2>
+              <p class="vidl-service-block-text">We partner with developers and ownership groups to shape retail environments through intentional tenant mix and strategic placement.</p>
+              <p class="vidl-service-block-text">Our focus is on creating destinations that drive traffic, enhance experience, and increase long-term asset value.</p>
+            </div>
+          </div>
+
+          <!-- Venture Capital Relations -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-block-number">05</div>
+            <h2 class="vidl-service-block-title">Venture Capital Relations</h2>
+            <p class="vidl-service-block-text">We provide strategic broker relations for qualified investors, positioning brands for exponential growth and successful exits.</p>
+            <p class="vidl-service-block-text">Our network connects emerging and established brands with the right capital partners, aligning investment with long-term brand trajectory and market opportunity.</p>
+          </div>
+
+          <!-- Philanthropy -->
+          <div class="vidl-service-block animation-up-0-1">
+            <div class="vidl-service-block-number">06</div>
+            <h2 class="vidl-service-block-title">Philanthropic Efforts</h2>
+            <p class="vidl-service-block-text">We are committed to giving back through charity, humanitarian, and philanthropic relations&#8212;locally and internationally.</p>
+            <p class="vidl-service-block-text">Community impact is a core part of who we are. We actively support initiatives that create meaningful, lasting change in the communities where we operate.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div style="-webkit-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-fade-in">
+        <div class="image-wrapper-content">
+          <div style="-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-up-0-1">
+            <div class="center-align">
+              <div class="label-wrapper">
+                <div class="label-dot white"></div>
+                <div class="small-text cta-top-text">Ready to Move Forward?</div>
+              </div>
+            </div>
+          </div>
+          <div class="animation-up-0-2 center-content">
+            <div class="margin-bottom medium">
+              <div class="display-heading-wrapper">
+                <div class="overflow-hide">
+                  <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="display-font-wrapper">
+                    <h2 class="cta-text" style="font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:400;line-height:1.7;max-width:700px;margin:0 auto;">Looking to expand or position an asset more strategically?</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="mailto:andrew@vidlcompanies.com?subject=Schedule%20a%20Call" class="secondary-button w-inline-block">
+              <div class="medium-text neutral-light">Schedule a Call</div>
+              <div class="button-icon-circle white">
+                <div class="button-icon-wrapper">
+                  <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                  <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="background-image-wrapper">
+            <div class="image-overlay"></div><img sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/IMG_3865-Large_1IMG_3865-Large.webp 500w, images/IMG_3865-Large_1IMG_3865-Large.webp 800w, images/IMG_3865-Large_1IMG_3865-Large.webp 1080w, images/IMG_3865-Large_1.webp 1280w" alt="Vidl Companies" src="images/IMG_3865-Large_1.webp" loading="eager" class="background-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <article id="Footer" class="footer">
+      <div class="container footer-contain">
+        <div class="_12-column-grid right-aligned fix-column">
+          <div id="w-node-footer-logo" class="footer-list-wrapper full-mob">
+            <a href="index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="Vidl Companies logo" src="images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
+            <div class="small-text neutral">
+              <p class="paragraph medium-text left-aligned">Strategic Real Estate &amp; Brand Expansion<br>for Experiential Retail</p>
+            </div>
+          </div>
+          <div class="footer-list-wrapper mobile-footer hide">
+            <div class="margin-bottom extra-small">
+              <div class="small-text neutral">LOCATIONS</div>
+            </div>
+            <a href="#" class="minimal-button w-inline-block">
+              <div class="button-content-wrapper">
+                <div class="button-content">
+                  <div class="medium-text neutral-light">Scottsdale, AZ</div>
+                  <div class="underline">
+                    <div class="line-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="div-block-4">
+            <div class="footer-list-wrapper mobile-footer">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SITEMAP</div>
+              </div>
+              <a href="index.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Home</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+              <a href="about.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">About</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+              <a href="services.html" aria-current="page" class="minimal-button w-inline-block w--current">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Services</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+              <a href="team.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Team</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+              <a href="developments.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Developments</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+              <a href="contact.html" class="minimal-button w-inline-block">
+                <div class="button-content-wrapper">
+                  <div class="button-content">
+                    <div class="medium-text neutral-light">Contact</div>
+                    <div class="underline"><div class="line-fill"></div></div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="footer-list-wrapper left-space-ffooter">
+              <div class="margin-bottom extra-small">
+                <div class="small-text neutral">SOCIAL</div>
+              </div>
+              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="Arrow icon" class="social-link-icon">
+                <div class="button-link-text whiite">Instagram</div>
+              </a>
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="Arrow icon" class="social-link-icon">
+                <div class="button-link-text whiite">Linkedin</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider dark margin-top"></div>
+      <div class="animation-up-0-1">
+        <div class="container no-padding-top-bot">
+          <div class="footer-bottom-bar mobile-footer-bottom">
+            <div class="footer-block mobile-footer-bottom">
+              <div class="footer-block-left">
+                <a href="privacy-policy.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Privacy Policy</div>
+                    </div>
+                  </div>
+                </a>
+                <a href="terms-of-service.html" class="minimal-button w-inline-block">
+                  <div class="button-content-wrapper">
+                    <div class="button-content">
+                      <div class="small-footer-text">Terms of Service</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="small-footer-text">&copy;2026. All rights reserved</div>
+            </div>
+          </div>
+          <div class="footer-bottom-bar footer-disclaimer">
+            <div class="footer-block disclaimer-bottom">
+              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to V&#299;dl's CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

@@ -1,4 +1,58 @@
 :root {
+/* ─── Editorial Layout (New) ─── */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .editorial-grid {
+    grid-template-columns: 3fr 9fr;
+    gap: 4rem;
+  }
+}
+.editorial-grid.three-col {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+  .editorial-grid.three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+}
+.editorial-grid.two-col {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 992px) {
+  .editorial-grid.two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.editorial-grid > div[id^="w-node"] {
+  grid-area: auto !important;
+  width: 100%;
+}
+
+.editorial-col-left {
+  display: flex;
+  flex-direction: column;
+}
+.editorial-col-right {
+  display: flex;
+  flex-direction: column;
+}
+.editorial-col-right .extra-large-text {
+  margin-bottom: 2rem;
+}
+.editorial-col-right .medium-text {
+  margin-bottom: 1.25rem;
+}
+.editorial-col-right .medium-text:last-child {
+  margin-bottom: 0;
+}
   --primary--white: #fdfdfd;
   --text-color--neutral-darkest: #222;
   --primary--black: #0f0f0f;
@@ -205,7 +259,7 @@ figcaption {
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   grid-auto-flow: row;
   align-content: stretch;
@@ -1104,8 +1158,17 @@ figcaption {
   display: flex;
 }
 
-.hero-logo-animation {
-  width: 100%;
+.display-font-wrapper {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+.hero-override-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  display: block !important;
 }
 
 .hero-bottom {
@@ -4012,6 +4075,21 @@ figcaption {
 
   .hero-logo-animation {
     width: 100%;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  
+  .display-font-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  
+  .big-logo-image {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
   }
 
   .hero-bottom {

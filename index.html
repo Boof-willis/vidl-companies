@@ -1,12 +1,12 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Vidl Companies | Boutique Real Estate &amp; Strategic Consulting</title>
-  <meta content="Discover Vidl, a boutique real estate firm specializing in experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations." name="description">
-  <meta content="Vidl Companies | Boutique Real Estate &amp; Strategic Consulting" property="og:title">
-  <meta content="Discover Vidl, a boutique real estate firm specializing in experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations." property="og:description">
-  <meta content="Vidl Companies | Boutique Real Estate &amp; Strategic Consulting" property="twitter:title">
-  <meta content="Discover Vidl, a boutique real estate firm specializing in experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations." property="twitter:description">
+  <title>Vidl Companies | Strategic Real Estate &amp; Brand Expansion for Experiential Retail</title>
+  <meta content="Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands. Tenant representation, site selection, brand expansion, and development across Arizona and national markets." name="description">
+  <meta content="Vidl Companies | Strategic Real Estate &amp; Brand Expansion for Experiential Retail" property="og:title">
+  <meta content="Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands. Tenant representation, site selection, brand expansion, and development across Arizona and national markets." property="og:description">
+  <meta content="Vidl Companies | Strategic Real Estate &amp; Brand Expansion for Experiential Retail" property="twitter:title">
+  <meta content="Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands. Tenant representation, site selection, brand expansion, and development across Arizona and national markets." property="twitter:description">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -14,17 +14,17 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/base.css" rel="stylesheet" type="text/css">
   <link href="css/vidl.css" rel="stylesheet" type="text/css">
-  
+
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
   <style>
   body {
     -webkit-font-smoothing: antialiased;
-  } 
+  }
   /* smooth scrolling */
   html.lenis {
     height: auto;
@@ -108,12 +108,6 @@
   color: var(--primary--black, #0f0f0f);
 }
 
-/* ─── Vidl Section Cap ─── */
-.section-4.vidl-section {
-  aspect-ratio: 16 / 9;
-  max-height: 100vh;
-}
-
 /* ─── Hero CTA ─── */
 .hero-cta {
   margin-top: 2rem;
@@ -128,24 +122,90 @@
     transform: translateY(0);
   }
 }
+.hero-cta-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-/* ─── Services Cards ─── */
-.services-grid {
+/* ─── Hero Subline ─── */
+.hero-subline {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(253, 253, 253, 0.8);
+  max-width: 640px;
+  margin-top: 1.25rem;
+}
+.hero-brand-line {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(253, 253, 253, 0.45);
+  margin-top: 2rem;
+}
+
+/* ─── Stats Grid ─── */
+.vidl-stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   width: 100%;
 }
-.service-card {
+.vidl-stat-item {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+}
+.vidl-stat-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary--charcoal, #1d1d1d);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.vidl-stat-label {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-color--neutral-darker, #666);
+  line-height: 1.5;
+}
+@media (max-width: 991px) {
+  .vidl-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 479px) {
+  .vidl-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .vidl-stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* ─── Services Preview Cards ─── */
+.vidl-services-preview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+.vidl-service-preview-card {
   position: relative;
   overflow: hidden;
-  border-radius: 0;
-  height: 420px;
+  height: 380px;
   display: block;
   text-decoration: none;
   color: inherit;
 }
-.service-card-bg {
+.vidl-service-preview-bg {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -153,29 +213,29 @@
   object-fit: cover;
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.service-card:hover .service-card-bg {
-  transform: scale(1.08);
+.vidl-service-preview-card:hover .vidl-service-preview-bg {
+  transform: scale(1.06);
 }
-.service-card-overlay {
+.vidl-service-preview-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 15, 15, 0.9) 0%,
-    rgba(15, 15, 15, 0.4) 50%,
-    rgba(15, 15, 15, 0.15) 100%
+    rgba(15, 15, 15, 0.88) 0%,
+    rgba(15, 15, 15, 0.35) 55%,
+    rgba(15, 15, 15, 0.12) 100%
   );
   transition: background 0.5s ease;
 }
-.service-card:hover .service-card-overlay {
+.vidl-service-preview-card:hover .vidl-service-preview-overlay {
   background: linear-gradient(
     to top,
-    rgba(15, 15, 15, 0.95) 0%,
-    rgba(15, 15, 15, 0.5) 50%,
-    rgba(15, 15, 15, 0.25) 100%
+    rgba(15, 15, 15, 0.92) 0%,
+    rgba(15, 15, 15, 0.45) 55%,
+    rgba(15, 15, 15, 0.2) 100%
   );
 }
-.service-card-content {
+.vidl-service-preview-content {
   position: relative;
   z-index: 1;
   display: flex;
@@ -183,93 +243,133 @@
   justify-content: flex-end;
   height: 100%;
   padding: 2rem;
-  color: #fdfdfd;
 }
-.service-card-number {
+.vidl-service-preview-number {
   font-family: 'Inter Tight', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(253, 253, 253, 0.5);
+  color: rgba(253, 253, 253, 0.45);
   margin-bottom: 0.75rem;
 }
-.service-card-title {
+.vidl-service-preview-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  line-height: 1.3;
-  margin: 0 0 0.75rem 0;
   color: #fdfdfd;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
 }
-.service-card-desc {
+.vidl-service-preview-desc {
   font-family: 'Inter Tight', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.65;
   color: rgba(253, 253, 253, 0.7);
-  margin: 0;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               opacity 0.4s ease 0.1s;
 }
-.service-card:hover .service-card-desc {
-  max-height: 120px;
+.vidl-service-preview-card:hover .vidl-service-preview-desc {
+  max-height: 100px;
   opacity: 1;
 }
-
-/* 5 cards: 3 top, 2 bottom spanning full width */
-.services-grid {
-  grid-template-columns: repeat(6, 1fr);
-}
-.services-grid .service-card:nth-child(1),
-.services-grid .service-card:nth-child(2),
-.services-grid .service-card:nth-child(3) {
-  grid-column: span 2;
-}
-.services-grid .service-card:nth-child(4) {
-  grid-column: 1 / 4;
-}
-.services-grid .service-card:nth-child(5) {
-  grid-column: 4 / 7;
-}
-
 @media (max-width: 991px) {
-  .services-grid {
+  .vidl-services-preview {
     grid-template-columns: repeat(2, 1fr);
   }
-  .services-grid .service-card:nth-child(1),
-  .services-grid .service-card:nth-child(2),
-  .services-grid .service-card:nth-child(3),
-  .services-grid .service-card:nth-child(4),
-  .services-grid .service-card:nth-child(5) {
-    grid-column: auto;
-  }
-  .services-grid .service-card:nth-child(5) {
-    grid-column: 1 / -1;
-  }
-  .service-card {
-    height: 350px;
-  }
-  .service-card-desc {
+  .vidl-service-preview-desc {
     max-height: none;
     opacity: 1;
   }
+  .vidl-service-preview-card {
+    height: 340px;
+  }
 }
 @media (max-width: 479px) {
-  .services-grid {
+  .vidl-services-preview {
     grid-template-columns: 1fr;
   }
-  .service-card {
-    height: 320px;
+  .vidl-service-preview-card {
+    height: 300px;
   }
 }
-</style>
-  <style>
+
+/* ─── Differentiation List ─── */
+.vidl-diff-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
+}
+.vidl-diff-list li {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-color--neutral-darker, #666);
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.vidl-diff-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary--charcoal, #1d1d1d);
+  border-radius: 50%;
+}
+
+/* ─── Market Tags ─── */
+.vidl-market-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.vidl-market-tag {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(29, 29, 29, 0.15);
+  color: var(--primary--charcoal, #1d1d1d);
+}
+
+/* ─── Brand Statement Section ─── */
+.vidl-brand-statement {
+  padding: 8rem 2rem;
+  text-align: center;
+  background-color: var(--primary--charcoal, #1d1d1d);
+}
+.vidl-brand-statement-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fdfdfd;
+  max-width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .vidl-brand-statement {
+    padding: 5rem 1.5rem;
+  }
+  .vidl-brand-statement-text {
+    font-size: 2rem;
+  }
+}
+
+/* ─── Loader ─── */
 .loader {
-	display: flex;
+  display: flex;
 }
 .progress-circle {
   width: 120px;
@@ -286,6 +386,70 @@
     background: conic-gradient(#3498db 0%, #3498db 100%, #f3f3f3 100%);
   }
 }
+
+/* ─── Differentiator Grid ─── */
+.vidl-differentiator-grid {
+  display: grid;
+  grid-template-columns: 4.5fr 7.5fr;
+  gap: 5rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+.vidl-diff-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+.vidl-diff-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition: filter 0.6s ease, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.vidl-diff-image-wrapper:hover .vidl-diff-image {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.vidl-diff-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.vidl-diff-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--primary--charcoal, #1d1d1d);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+.vidl-diff-desc {
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color--neutral-darker, #555);
+  margin: 0;
+}
+.vidl-diff-block {
+  border-top: 1px solid rgba(29,29,29,0.1);
+  padding-top: 2rem;
+}
+
+@media (max-width: 991px) {
+  .vidl-differentiator-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  .vidl-diff-image-wrapper {
+    aspect-ratio: 16 / 9;
+  }
+  .vidl-diff-title {
+    font-size: 1.5rem;
+  }
+}
 </style>
 <script type="application/ld+json">
 {
@@ -297,7 +461,7 @@
   "url": "https://vidl-companies.pages.dev/",
   "logo": "https://vidl-companies.pages.dev/images/VIDLCOMPANY.webp",
   "image": "https://vidl-companies.pages.dev/images/VIDLCOMPANY.webp",
-  "description": "Vidl Companies is a boutique real estate firm specializing in experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations across Phoenix and Scottsdale, Arizona.",
+  "description": "Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands and high-quality retail environments across Arizona and major U.S. markets.",
   "email": "andrew@vidlcompanies.com",
   "areaServed": [
     {
@@ -328,12 +492,12 @@
     "https://www.linkedin.com/in/andrew-laporte-951349a6/"
   ],
   "knowsAbout": [
-    "Commercial Real Estate Brokerage",
     "Tenant Representation",
-    "Boutique Real Estate Development",
-    "Retail Brand Strategic Consulting",
-    "Venture Capital Relations",
-    "Experiential Retail"
+    "Site Selection & Market Strategy",
+    "Brand Expansion Advisory",
+    "Boutique Development & Curation",
+    "Experiential Retail",
+    "Strategic Real Estate Advisory"
   ]
 }
 </script>
@@ -352,8 +516,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Vidl Companies | Boutique Real Estate & Strategic Consulting",
-  "description": "Discover Vidl, a boutique real estate firm specializing in experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations.",
+  "name": "Vidl Companies | Strategic Real Estate & Brand Expansion for Experiential Retail",
+  "description": "Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands. Tenant representation, site selection, brand expansion, and development across Arizona and national markets.",
   "url": "https://vidl-companies.pages.dev/",
   "isPartOf": {
     "@id": "https://vidl-companies.pages.dev/#website"
@@ -381,7 +545,7 @@
       <article class="nav-bar">
         <div class="progress-bar"></div>
         <div class="container-nav">
-          <a href="index.html" aria-current="page" class="logo-link w-inline-block w--current"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo original"><img loading="lazy" src="images/Untitled-design-38.png" alt="Logo Image" class="small-logo white-overlap"></a>
+          <a href="index.html" aria-current="page" class="logo-link w-inline-block w--current"><img loading="lazy" src="images/Untitled-design-38.png" alt="Vidl Companies Logo" class="small-logo original"><img loading="lazy" src="images/Untitled-design-38.png" alt="Vidl Companies Logo" class="small-logo white-overlap"></a>
           <div class="nav-desktop-link-wrapper">
             <a href="index.html" aria-current="page" class="nav-link-desktop w-inline-block w--current">
               <div class="nav-text-wrapper">
@@ -461,23 +625,29 @@
         <div class="border-shadow"></div>
       </article>
     </section>
+
+    <!-- SECTION 1: HERO -->
     <div class="hero-section-wrapper">
       <section class="hero-section">
         <div id="bgVideo" class="hero-content-wrapper">
-          <div class="hero-content hero-centered-mobile">
-            <div class="hero-top-new">
-              <h1 class="medium-text hero-top-text">CRAFT THE EXTRAORDINARY // experience the phenomenal</h1>
+          <div class="hero-content hero-centered-mobile" style="align-items: center; text-align: center; height: auto; min-height: 75vh; justify-content: center; gap: 0.5rem; padding-top: 60px; position: relative; z-index: 10;">
+            <div class="hero-top-new" style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+              <div class="medium-text hero-top-text" style="font-size: 0.7rem; letter-spacing: 0.25em; opacity: 0.8; color: #fdfdfd; text-transform: uppercase;">CRAFT THE EXTRAORDINARY // EXPERIENCE THE PHENOMENAL</div>
             </div>
-            <div class="hero-bottom flex-vertical">
-              <div id="w-node-b04e7e87-0098-6d7d-f614-aac806cb204f-108cf504" class="hero-logo-animation">
-                <div class="overflow-hide">
-                  <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="big-logo-image-wrapper"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="" src="images/VIDLCOMPANY.webp" loading="eager" fetchpriority="high" class="big-logo-image add-min-width"></div>
+            <div class="hero-bottom flex-vertical" style="align-items: center; width: 100%; max-width: 1200px; gap: 0.5rem;">
+              <div style="width: 100%; text-align: center; position: relative; z-index: 100;">
+                <div>
+                  <div>
+                    <img alt="Vidl Companies Logo" src="images/VIDLCOMPANY.webp" style="width: 80%; max-width: 1000px; height: auto; margin: 0 auto -0.5rem auto; display: block;">
+                    <h1 class="display-heading" style="font-family:'Montserrat',sans-serif;font-size:clamp(1.2rem, 2.5vw, 1.8rem);font-weight:500;line-height:1.4;color:#fdfdfd;margin:0 auto 0 auto; max-width: 900px; letter-spacing: 0.02em; text-transform: none;">Strategic Real Estate &amp; Brand Expansion for Experiential Retail</h1>
+                  </div>
                 </div>
               </div>
+              <p class="hero-subline" style="text-align: center; margin: 0 auto 0 auto; max-width: 700px; font-size: 1.05rem; opacity: 0.85; line-height: 1.6;">We partner with brands, landlords, and developers to secure premier placements, scale physical presence, and execute high-impact real estate strategies across Arizona and key national markets.</p>
             </div>
-            <div class="hero-cta">
+            <div class="hero-cta" style="align-self: center; margin-top: 1.5rem;">
               <a href="contact.html" class="secondary-button w-inline-block">
-                <div class="medium-text neutral-light">Get In Touch</div>
+                <div class="medium-text neutral-light">Start a Conversation</div>
                 <div class="button-icon-circle white">
                   <div class="button-icon-wrapper">
                     <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
@@ -495,394 +665,314 @@
           </div>
         </div>
         <div class="hero-image-wrapper">
-          <div class="image-overlay"></div>
           <div data-poster-url="videos/vidl-home-poster-00001.jpg" data-video-urls="videos/vidl-home-transcode.mp4,videos/vidl-home-transcode.webm" data-autoplay="true" data-loop="true" class="hero-image w-background-video w-background-video-atom"><video id="60e8a8ca-313e-3994-1121-73358338afe6-video" autoplay="" loop="" style="background-image:url(&quot;videos/vidl-home-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
               <source src="videos/vidl-home-transcode.mp4">
               <source src="videos/vidl-home-transcode.webm">
             </video></div>
+          <div class="image-overlay" style="background-color: rgba(0,0,0,0.6); z-index: 2; pointer-events: none;"></div>
         </div>
       </section>
       <div class="spacer"></div>
     </div>
+
     <div class="page-content-wrapper">
+
+      <!-- SECTION 2: POSITIONING & STATS -->
       <section class="section-4 mission">
         <div class="container">
           <div class="section-content">
-            <div class="section-header-wrapper">
-              <div class="_12-column-grid stack-mobile">
-                <div id="w-node-_59ef0993-ebc7-14db-992e-b7a2b52351ac-108cf504" class="animation-up-0-1">
-                  <div class="label-wrapper">
-                    <div class="label-dot"></div>
-                    <div class="bullet-text">our mission</div>
-                  </div>
-                </div>
-                <div id="w-node-_59ef0993-ebc7-14db-992e-b7a2b52351b1-108cf504" class="animation-left-0-2 services-cta">
-                  <div class="extra-large-text dark-text">Vīdl is a boutique real estate firm, specializing in the curation of experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations. Designed with an intention to capture the state of being present to Mastery. Detail focused and quality ensured. Together, we are a “Vīdl” part of giving back to the community in a monumental way and pushing the envelope to raise the bar in how business is executed. <br><br>Vīdl Companies was built to lead, authentically. To align with others that seek to be Consciously Connected. Disciplined in the art of personal excellence. <br><br>Welcome to a higher frequency of being truly authentic and disciplined human beings. Vīdl pillars in exceptional business, scalability, and creative developments. Challenging you to live your best life and reap a true state of fulfillment!<br><br>Embrace the Revolution.</div>
-                  <a href="contact.html" class="secondary-button left-align w-inline-block">
-                    <div class="large-text">Learn More</div>
-                    <div class="button-icon-circle">
-                      <div class="button-icon-wrapper">
-                        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-icon hover w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                        <div class="arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="container">
-          <div class="section-content">
-            <div class="section-header-wrapper">
-              <div class="_12-column-grid adjust-column-grid">
-                <div id="w-node-f4ea1ddd-98d3-c8b9-6ae4-b44fd2f021a4-108cf504" class="animation-up-0-1">
-                  <div class="label-wrapper">
-                    <div class="label-dot-2"></div>
-                    <div class="bullet-text-2">Our Services</div>
-                  </div>
-                </div>
-                <div id="w-node-f4ea1ddd-98d3-c8b9-6ae4-b44fd2f021a9-108cf504" class="animation-left-0-2 services-cta">
-                  <div class="extra-large-text-2 dark-text">We specialize in building strategic partnerships, brand development, and bespoke solutions, delivering premium experiences that elevate luxury brands and drive lasting impact.</div>
-                  <a href="process.html" class="secondary-button left-align w-inline-block">
-                    <div class="large-text">Discover Our Process</div>
-                    <div class="button-icon-circle-2">
-                      <div class="button-icon-wrapper">
-                        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-icon hover w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                        <div class="arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="services-grid">
-              <a href="services/brokerage.html" class="service-card animation-left-0-1">
-                <img loading="lazy" src="images/IMG_3870-opt_1.webp" alt="Full-Service Brokerage" class="service-card-bg">
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                  <span class="service-card-number">01</span>
-                  <h3 class="service-card-title">Full-Service Brokerage</h3>
-                  <p class="service-card-desc">Specializing in tenant representation and strategic developer consulting to curate key tenancy within premier projects.</p>
-                </div>
-              </a>
-              <a href="services/consulting.html" class="service-card animation-left-0-2">
-                <img loading="lazy" src="images/IMG_3918-Large_1.webp" alt="Strategic Consulting" class="service-card-bg">
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                  <span class="service-card-number">02</span>
-                  <h3 class="service-card-title">Retail Brand Strategic Consulting</h3>
-                  <p class="service-card-desc">Helping brands scale nationally through strategic partnerships, ensuring quality over quantity for lasting success.</p>
-                </div>
-              </a>
-              <a href="services/development.html" class="service-card animation-left-0-3">
-                <img loading="lazy" src="images/IMG_3903-opt_1.webp" alt="Boutique Development" class="service-card-bg">
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                  <span class="service-card-number">03</span>
-                  <h3 class="service-card-title">Boutique Development</h3>
-                  <p class="service-card-desc">Actively involved as General and Limited Partner in development projects, delivering significant value and increased profits.</p>
-                </div>
-              </a>
-              <a href="services/venture-capital.html" class="service-card animation-left-0-1">
-                <img loading="lazy" src="images/DJI_0386-Large_1.webp" alt="Venture Capital Relations" class="service-card-bg">
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                  <span class="service-card-number">04</span>
-                  <h3 class="service-card-title">Venture Capital Relations</h3>
-                  <p class="service-card-desc">Strategic broker relations for qualified investors, positioning brands for exponential growth and successful exits.</p>
-                </div>
-              </a>
-              <a href="services/philanthropy.html" class="service-card animation-left-0-2">
-                <img loading="lazy" src="images/IMG_3846-Large_1.webp" alt="Philanthropic Efforts" class="service-card-bg">
-                <div class="service-card-overlay"></div>
-                <div class="service-card-content">
-                  <span class="service-card-number">05</span>
-                  <h3 class="service-card-title">Philanthropic Efforts</h3>
-                  <p class="service-card-desc">Committed to giving back through charity, humanitarian, and philanthropic relations—locally and internationally.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-2">
-        <div class="div-block-2">
-          <div class="extra-large-text sub-hero-tex">Vīdl is a boutique real estate firm, specializing in the curation of experiential business through brokerage, bespoke development, strategic consulting, and venture capital relations. Designed with an intention to capture the state of being present to Mastery. Detail focused and quality ensured. Together, we are a “Vīdl” part of giving back to the community in a monumental way and pushing the envelope to raise the bar in how business is executed. <br><br>Vīdl Companies was built to lead, authentically. To align with others that seek to be Consciously Connected. Disciplined in the art of personal excellence. <br><br>Welcome to a higher frequency of being truly authentic and disciplined human beings. Vīdl pillars in exceptional business, scalability, and creative developments. Challenging you to live your best life and reap a true state of fulfillment!<br><br>Embrace the Revolution.</div>
-        </div>
-      </section>
-      <section class="section-3">
-        <div class="container custom-container">
-          <div class="section-content _2-rem">
-            <div class="feature-grid">
-              <div class="_12-column-grid vertical">
-                <div id="w-node-_326da685-34cb-003c-3f67-a02d3dbb7872-108cf504" class="label-wrapper">
+            <div class="editorial-grid">
+              <div class="editorial-col-left animation-up-0-1">
+                <div class="label-wrapper">
                   <div class="label-dot"></div>
-                  <div class="bullet-text">Featured Projects</div>
+                  <div class="bullet-text">Who We Are</div>
                 </div>
-                <div id="w-node-_6338b9fe-cbf6-73d7-73ea-ec8ac7f9a3c9-108cf504" class="_2-column-grid featured-gap">
-                  <div id="w-node-_4a160153-4ab5-a9d3-8c4b-e486fbb5e59a-108cf504" class="animation-left-0-2">
-                    <a href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3839-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">Toca Madera </div>
-                        <div class="small-text neutral-medium">Modern Commercial Building</div>
-                      </div>
-                    </a>
+              </div>
+              <div class="editorial-col-right animation-left-0-2 services-cta">
+                <div class="extra-large-text dark-text" style="margin-bottom:1.5rem;">V&#299;dl Companies is a boutique real estate and strategic advisory firm focused on experiential brands and high-quality retail environments.</div>
+                <div class="medium-text" style="margin-bottom:1.25rem;">We operate at the intersection of real estate, brand positioning, and growth strategy, helping clients expand intentionally, secure the right locations, and build long-term value through physical presence.</div>
+                <div class="medium-text" style="margin-bottom:4rem;">With deep market expertise in Arizona and a national network of relationships, we bring clarity, alignment, and execution to every engagement.</div>
+                
+                <div class="vidl-stats-grid">
+                  <div class="vidl-stat-item" style="padding: 0; text-align: left;">
+                    <div class="vidl-stat-number">$500M+</div>
+                    <div class="vidl-stat-label">Transaction Experience</div>
                   </div>
-                  <div id="w-node-e79ceaf9-d9d3-b2a3-9d61-9737f32c63e8-108cf504" style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
-                    <a id="w-node-e79ceaf9-d9d3-b2a3-9d61-9737f32c63e9-108cf504" href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3918-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">Modern Commercial Building</div>
-                        <div class="small-text neutral-medium">Spacious Retail Unit with High Ceilings and Industrial Design</div>
-                      </div>
-                    </a>
+                  <div class="vidl-stat-item" style="padding: 0; text-align: left;">
+                    <div class="vidl-stat-number">100+</div>
+                    <div class="vidl-stat-label">Brand &amp; Retail Placements</div>
                   </div>
-                  <div id="w-node-e79ceaf9-d9d3-b2a3-9d61-9737f32c63f7-108cf504" class="animation-left-0-2">
-                    <a href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3846-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">OCEAN 44</div>
-                        <div class="small-text neutral-medium">Premium Office Space in the Heart of the Business District</div>
-                      </div>
-                    </a>
+                  <div class="vidl-stat-item" style="padding: 0; text-align: left;">
+                    <div class="vidl-stat-number">AZ+</div>
+                    <div class="vidl-stat-label">Active Across Arizona &amp; Major U.S. Markets</div>
                   </div>
-                  <div id="w-node-e79ceaf9-d9d3-b2a3-9d61-9737f32c6406-108cf504" class="animation-left-0-2">
-                    <a id="w-node-_3c4d574f-9193-c91a-da46-e95bccf04167-108cf504" href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3929-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">POTTERY BARN</div>
-                        <div class="small-text neutral-medium">Versatile Commercial Space with High Traffic Exposure</div>
-                      </div>
-                    </a>
+                  <div class="vidl-stat-item" style="padding: 0; text-align: left;">
+                    <div class="vidl-stat-number">EXP</div>
+                    <div class="vidl-stat-label">Specialized in Experiential &amp; Quality Retail</div>
                   </div>
-                  <div id="w-node-a34da09c-4c20-fdcf-773d-4325a8d73a9a-108cf504" class="animation-left-0-2">
-                    <a href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3955-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">COMMERCIAL COMPLEX</div>
-                        <div class="small-text neutral-medium">Newly Renovated Retail Space in a Thriving Business Hub</div>
-                      </div>
-                    </a>
-                  </div>
-                  <div id="w-node-_966dd5a0-050d-d048-71ae-dca6ceb1bf49-108cf504" style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
-                    <a id="w-node-_966dd5a0-050d-d048-71ae-dca6ceb1bf4a-108cf504" href="portfolio.html" class="component hover-over w-inline-block">
-                      <div class="hold-image">
-                        <div class="parallax-image ratio-4-2"><img src="images/IMG_3875-Large_1.webp" loading="lazy" alt="" class="background-image image-custom"></div>
-                        <div class="frame-animate">
-                          <div class="frame-bottop"></div>
-                          <div class="frame-bottop bot"></div>
-                          <div class="frame-sides"></div>
-                          <div class="frame-sides right"></div>
-                        </div>
-                      </div>
-                      <div class="bottom">
-                        <div class="title-text">CHANEL</div>
-                        <div class="small-text neutral-medium">Stylish Retail Space with Expansive Glass Facade and Elegant Interior</div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="animation-left-0-2 portfolio-cta">
-                  <div class="divider small-div"></div>
-                  <a href="portfolio.html" class="secondary-button left-align w-inline-block">
-                    <div class="large-text">Explore Our Portfolio</div>
-                    <div class="button-icon-circle">
-                      <div class="button-icon-wrapper">
-                        <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-icon hover w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                        <div class="arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                          </svg></div>
-                      </div>
-                    </div>
-                  </a>
-                  <div class="divider small-div"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- SECTION 4: CLIENT REPRESENTATION & RELATIONSHIPS -->
       <section>
         <div style="width:0%" class="divider"></div>
         <div class="container _2">
           <div class="section-content">
-            <div class="section-header-wrapper">
-              <div class="_12-column-grid stack-mobile">
-                <div id="w-node-_8f5f005f-c839-9ef1-c386-0aa365b72c39-108cf504" class="animation-up-0-1">
-                  <div class="label-wrapper">
-                    <div class="label-dot"></div>
-                    <div class="bullet-text">BRAND AFFILIATIONS</div>
-                  </div>
-                </div>
-                <div id="w-node-_8f5f005f-c839-9ef1-c386-0aa365b72c3e-108cf504" style="-webkit-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(20px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-left-0-2">
-                  <div class="extra-large-text">Vīdl aligns with and has represented an array of visionary brands, innovators, and leaders across retail, wellness, lifestyle, hospitality, food and beverage, and entertainment uses crafting bespoke solutions that bring exceptional experiences to life. Some of which include:</div>
+            <div class="editorial-grid">
+              <div class="editorial-col-left animation-up-0-1">
+                <div class="label-wrapper" style="align-items: flex-start;">
+                  <div class="label-dot" style="margin-top: 0.45rem;"></div>
+                  <div class="bullet-text">BRAND<br>AFFILIATIONS</div>
                 </div>
               </div>
-            </div>
-            <div class="_12-column-grid">
-              <div id="w-node-_8f5f005f-c839-9ef1-c386-0aa365b72c42-108cf504" class="logos-wrapper wrap-mob">
+              <div class="editorial-col-right animation-left-0-2">
+                <div class="medium-text" style="margin-bottom: 5rem;">Vidl aligns with and has represented an array of visionary brands, innovators, and leaders across retail, wellness, lifestyle, hospitality, food and beverage, and entertainment uses crafting bespoke solutions that bring exceptional experiences to life. Some of which include:</div>
+                <div class="logos-wrapper wrap-mob">
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/3.webp" loading="lazy" sizes="(max-width: 613px) 100vw, 613px" srcset="images/3-p-500.png 500w, images/3.webp 613w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/3.webp" loading="lazy" sizes="(max-width: 613px) 100vw, 613px" srcset="images/3-p-500.png 500w, images/3.webp 613w" alt="Client logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/2_1.webp" loading="lazy" sizes="(max-width: 613px) 100vw, 613px" srcset="images/2_12.webp 500w, images/2_1.webp 613w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/2_1.webp" loading="lazy" sizes="(max-width: 613px) 100vw, 613px" srcset="images/2_12.webp 500w, images/2_1.webp 613w" alt="Client logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Icryo_Logo.webp" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/Icryo_Logo-p-500.webp 500w, images/Icryo_Logo.webp 1920w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Icryo_Logo.webp" loading="lazy" sizes="(max-width: 1920px) 100vw, 1920px" srcset="images/Icryo_Logo-p-500.webp 500w, images/Icryo_Logo.webp 1920w" alt="iCRYO logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Untitled-design-34.png" loading="lazy" sizes="(max-width: 615px) 100vw, 615px" srcset="images/Untitled-design-34-p-500.png 500w, images/Untitled-design-34.png 615w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Untitled-design-34.png" loading="lazy" sizes="(max-width: 615px) 100vw, 615px" srcset="images/Untitled-design-34-p-500.png 500w, images/Untitled-design-34.png 615w" alt="Client logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/WeWhiten_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/WeWhiten_Logo.svg" loading="lazy" alt="WeWhiten logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/6.webp" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/6.webp" loading="lazy" alt="Client logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/7.webp" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/7.webp" loading="lazy" alt="Client logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Untitled-design-36.png" loading="lazy" sizes="(max-width: 615px) 100vw, 615px" srcset="images/Untitled-design-36-p-500.png 500w, images/Untitled-design-36.png 615w" alt="" class="logo-image lifetime"></div>
+                  <div class="logo-wrapper"><img src="images/Untitled-design-36.png" loading="lazy" sizes="(max-width: 615px) 100vw, 615px" srcset="images/Untitled-design-36-p-500.png 500w, images/Untitled-design-36.png 615w" alt="Client logo" class="logo-image lifetime"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/The-Workshop-Pilates_Logo.png" loading="lazy" sizes="(max-width: 1115px) 100vw, 1115px" srcset="images/The-Workshop-Pilates_Logo-p-500.png 500w, images/The-Workshop-Pilates_Logo-p-800.png 800w, images/The-Workshop-Pilates_Logo-p-1080.png 1080w, images/The-Workshop-Pilates_Logo.png 1115w" alt="" class="logo-image filtered-logo contained-logo"></div>
+                  <div class="logo-wrapper"><img src="images/The-Workshop-Pilates_Logo.png" loading="lazy" sizes="(max-width: 1115px) 100vw, 1115px" srcset="images/The-Workshop-Pilates_Logo-p-500.png 500w, images/The-Workshop-Pilates_Logo-p-800.png 800w, images/The-Workshop-Pilates_Logo-p-1080.png 1080w, images/The-Workshop-Pilates_Logo.png 1115w" alt="The Workshop Pilates logo" class="logo-image filtered-logo contained-logo"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/WePellet_Logo.png" loading="lazy" alt="" class="logo-image filtered-logo contained-logo"></div>
+                  <div class="logo-wrapper"><img src="images/WePellet_Logo.png" loading="lazy" alt="WePellet logo" class="logo-image filtered-logo contained-logo"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/UncleBears_Logo.png" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" srcset="images/UncleBears_Logo-p-500.png 500w, images/UncleBears_Logo.png 600w" alt="" class="logo-image filtered-logo contained-logo"></div>
+                  <div class="logo-wrapper"><img src="images/UncleBears_Logo.png" loading="lazy" sizes="(max-width: 600px) 100vw, 600px" srcset="images/UncleBears_Logo-p-500.png 500w, images/UncleBears_Logo.png 600w" alt="Uncle Bears logo" class="logo-image filtered-logo contained-logo"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/lowkey_Logo.png" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/lowkey_Logo.png" loading="lazy" alt="Lowkey logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/BlindBarber_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/BlindBarber_Logo.svg" loading="lazy" alt="Blind Barber logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/StarkFuture_Logo.png" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/StarkFuture_Logo.png" loading="lazy" alt="Stark Future logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Kohler-Signature-Store--Showroom_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Kohler-Signature-Store--Showroom_Logo.svg" loading="lazy" alt="Kohler Signature Store logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Specialized_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Specialized_Logo.svg" loading="lazy" alt="Specialized logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/MonroesChicken_Logo.png" loading="lazy" alt="" class="logo-image grayscaled-logo"></div>
+                  <div class="logo-wrapper"><img src="images/MonroesChicken_Logo.png" loading="lazy" alt="Monroes Chicken logo" class="logo-image grayscaled-logo"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Jump_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Jump_Logo.svg" loading="lazy" alt="Jump logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/EdisonCycle_Logo.webp" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/EdisonCycle_Logo.webp" loading="lazy" alt="Edison Cycle logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Ganem-Est-1982-1_Logo.avif" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Ganem-Est-1982-1_Logo.avif" loading="lazy" alt="Ganem logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Lumberjaxes_Logo.png" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" srcset="images/Lumberjaxes_Logo-p-500.png 500w, images/Lumberjaxes_Logo-p-800.png 800w, images/Lumberjaxes_Logo.png 1024w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Lumberjaxes_Logo.png" loading="lazy" sizes="(max-width: 1024px) 100vw, 1024px" srcset="images/Lumberjaxes_Logo-p-500.png 500w, images/Lumberjaxes_Logo-p-800.png 800w, images/Lumberjaxes_Logo.png 1024w" alt="Lumberjaxes logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/HashKitchen_Logo.png" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" srcset="images/HashKitchen_Logo-p-500.png 500w, images/HashKitchen_Logo-p-800.png 800w, images/HashKitchen_Logo-p-1080.png 1080w, images/HashKitchen_Logo.png 2560w" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/HashKitchen_Logo.png" loading="lazy" sizes="(max-width: 2560px) 100vw, 2560px" srcset="images/HashKitchen_Logo-p-500.png 500w, images/HashKitchen_Logo-p-800.png 800w, images/HashKitchen_Logo-p-1080.png 1080w, images/HashKitchen_Logo.png 2560w" alt="Hash Kitchen logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/KidStrong_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/KidStrong_Logo.svg" loading="lazy" alt="KidStrong logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/BellyKitchen_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/BellyKitchen_Logo.svg" loading="lazy" alt="Belly Kitchen logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/Crumble_Logo.svg" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/Crumble_Logo.svg" loading="lazy" alt="Crumble logo" class="logo-image"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/surfboy-era.avif" loading="lazy" alt="" class="logo-image"></div>
+                  <div class="logo-wrapper"><img src="images/surfboy-era.avif" loading="lazy" alt="Surfboy Era logo" class="logo-image"></div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
-        <section class="section-4 vidl-section">
-          <div class="container">
-            <div class="section-content">
-              <div class="section-header-wrapper">
-                <div class="_12-column-grid">
-                  <div id="w-node-a9ab2e4a-ceac-2acc-ee51-c605a49a20f5-108cf504" class="animation-up-0-1">
-                    <div class="label-wrapper">
-                      <div class="label-dot"></div>
-                      <div class="bullet-text">VĪDL</div>
-                    </div>
-                  </div>
-                  <div id="w-node-a9ab2e4a-ceac-2acc-ee51-c605a49a20fa-108cf504" class="animation-left-0-2 services-cta">
-                    <div class="extra-large-text dark-text">Visionaries in the Craft. Leaders. Spartans. <br>Impactful through BEING Consciously Connected. Authenticity is the highest form of vibration.<br>Disciplined in the Mission. QUAD CORE.<br>Legacy; Honor, Integrity, &amp; Commitment to Excellence. Giving back to the Community, selflessly.</div>
-                  </div>
+      </section>
+
+      <!-- SECTION 5: SERVICES PREVIEW -->
+      <section>
+        <div class="container">
+          <div class="section-content">
+            <div class="editorial-grid" style="margin-bottom: 3rem;">
+              <div class="editorial-col-left animation-up-0-1">
+                <div class="label-wrapper">
+                  <div class="label-dot"></div>
+                  <div class="bullet-text">Our Services</div>
                 </div>
               </div>
             </div>
+            <div class="vidl-services-preview animation-up-0-2">
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/IMG_3870-opt_1.webp" alt="Tenant Representation" class="vidl-service-preview-bg">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">01</span>
+                  <h3 class="vidl-service-preview-title">Tenant Representation</h3>
+                  <p class="vidl-service-preview-desc">We secure locations aligned with brand identity, target demographics, and long-term growth strategy.</p>
+                </div>
+              </div>
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/site-selection.webp" alt="Site Selection and Market Strategy" class="vidl-service-preview-bg" style="object-position: center bottom;">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">02</span>
+                  <h3 class="vidl-service-preview-title">Site Selection &amp; Market Strategy</h3>
+                  <p class="vidl-service-preview-desc">We identify and position brands within high-performing retail corridors and emerging markets.</p>
+                </div>
+              </div>
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/brand-expansion.webp" alt="Brand Expansion Advisory" class="vidl-service-preview-bg">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">03</span>
+                  <h3 class="vidl-service-preview-title">Brand Expansion Advisory</h3>
+                  <p class="vidl-service-preview-desc">We develop structured rollout strategies to scale brands with clarity and discipline.</p>
+                </div>
+              </div>
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/boutique-development.webp" alt="Boutique Development and Curation" class="vidl-service-preview-bg">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">04</span>
+                  <h3 class="vidl-service-preview-title">Boutique Development &amp; Curation</h3>
+                  <p class="vidl-service-preview-desc">We collaborate with developers to curate tenancy and elevate asset value.</p>
+                </div>
+              </div>
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/DJI_0386-Large_1.webp" alt="Venture Capital Relations" class="vidl-service-preview-bg">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">05</span>
+                  <h3 class="vidl-service-preview-title">Venture Capital Relations</h3>
+                  <p class="vidl-service-preview-desc">Strategic broker relations for qualified investors, positioning brands for exponential growth and successful exits.</p>
+                </div>
+              </div>
+              <div class="vidl-service-preview-card">
+                <img loading="lazy" src="images/philanthropy.webp" alt="Philanthropic Efforts" class="vidl-service-preview-bg">
+                <div class="vidl-service-preview-overlay"></div>
+                <div class="vidl-service-preview-content">
+                  <span class="vidl-service-preview-number">06</span>
+                  <h3 class="vidl-service-preview-title">Philanthropic Efforts</h3>
+                  <p class="vidl-service-preview-desc">Committed to giving back through charity, humanitarian, and philanthropic relations&#8212;locally and internationally.</p>
+                </div>
+              </div>
+            </div>
+            <div class="animation-left-0-2" style="margin-top:2.5rem;">
+              <a href="services.html" class="secondary-button left-align w-inline-block">
+                <div class="large-text">View Services</div>
+                <div class="button-icon-circle">
+                  <div class="button-icon-wrapper">
+                    <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-icon hover w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></div>
+                    <div class="arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg></div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-        </section>
+        </div>
       </section>
+
+      <!-- SECTION 6 & 7: DIFFERENTIATION & MARKET FOCUS -->
+      <section>
+        <style>
+          .vidl-edge-card {
+            max-width: 680px; 
+            padding: 4.5rem; 
+            background: rgba(15, 15, 15, 0.45); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255,255,255,0.08); 
+            border-radius: 2px;
+          }
+          @media (max-width: 767px) {
+            .vidl-edge-card {
+              padding: 2rem;
+            }
+          }
+        </style>
+        <div class="animation-fade-in">
+          <div class="image-wrapper-content" style="padding: 10rem 0; min-height: 90vh; display: flex; align-items: center;">
+            <div class="container" style="position: relative; z-index: 10; width: 100%;">
+              <div class="section-content" style="display: flex; justify-content: flex-start;">
+                
+                <div class="vidl-edge-card animation-up-0-2">
+                  <div class="label-wrapper" style="margin-bottom: 2rem;">
+                    <div class="label-dot white"></div>
+                    <div class="bullet-text" style="color: rgba(253, 253, 253, 0.9);">The V&#299;dl Edge</div>
+                  </div>
+                  
+                  <h2 class="extra-large-text" style="color: #fdfdfd; margin-bottom: 3.5rem; font-size: 2.25rem; line-height: 1.25; font-weight: 400;">We approach real estate as a strategic growth lever, not a transaction.</h2>
+                  
+                  <div class="vidl-diff-content">
+                    <div class="vidl-diff-block" style="border-top: 1px solid rgba(253, 253, 253, 0.15); padding-top: 2rem; margin-bottom: 2.5rem;">
+                      <h3 class="vidl-diff-title" style="color: #fdfdfd; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;">Strategic Alignment</h3>
+                      <p class="vidl-diff-desc" style="color: rgba(253, 253, 253, 0.85); font-size: 1.05rem; line-height: 1.6;">We work with clients who understand that where and how you show up physically matters. We prioritize selective partnerships over volume, ensuring perfect alignment between brand, location, and timing.</p>
+                    </div>
+                    
+                    <div class="vidl-diff-block" style="border-top: 1px solid rgba(253, 253, 253, 0.15); padding-top: 2rem;">
+                      <h3 class="vidl-diff-title" style="color: #fdfdfd; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;">National Reach</h3>
+                      <p class="vidl-diff-desc" style="color: rgba(253, 253, 253, 0.85); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">Based in Arizona with strong ties to Scottsdale and Phoenix, our national relationships allow us to execute efficiently across major U.S. markets. We focus on long-term value, not short-term wins.</p>
+                      
+                      <div class="vidl-market-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0;">
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Scottsdale</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Phoenix</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Los Angeles</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Miami</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Dallas</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Austin</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Chicago</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Nashville</span>
+                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Denver</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="background-image-wrapper">
+              <div class="image-overlay" style="background: linear-gradient(to right, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0.6) 40%, rgba(15, 15, 15, 0.1) 100%);"></div>
+              <img src="images/Untitled-design-11-p-3200.jpg" loading="lazy" alt="The Vidl Edge" class="background-image" style="object-position: center;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: FINAL CTA -->
       <section>
         <div style="-webkit-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-fade-in">
           <div class="image-wrapper-content">
@@ -890,7 +980,7 @@
               <div class="center-align">
                 <div class="label-wrapper">
                   <div class="label-dot white"></div>
-                  <div class="small-text cta-top-text">Craft the Extraordinary</div>
+                  <div class="small-text cta-top-text">Building Something Intentional?</div>
                 </div>
               </div>
             </div>
@@ -899,13 +989,13 @@
                 <div class="display-heading-wrapper">
                   <div class="overflow-hide">
                     <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="display-font-wrapper">
-                      <h2 class="cta-text">Partner with Us to Bring Your Vision to Life</h2>
+                      <h2 class="cta-text" style="font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:400;line-height:1.7;max-width:700px;margin:0 auto;">Whether you're scaling a brand, leasing a flagship location, or developing a retail environment, we bring the strategy and execution to get it right.</h2>
                     </div>
                   </div>
                 </div>
               </div>
               <a href="contact.html" class="secondary-button w-inline-block">
-                <div class="medium-text neutral-light">Get In Touch</div>
+                <div class="medium-text neutral-light">Start a Conversation</div>
                 <div class="button-icon-circle white">
                   <div class="button-icon-wrapper">
                     <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
@@ -921,19 +1011,21 @@
               </a>
             </div>
             <div class="background-image-wrapper">
-              <div class="image-overlay"></div><img sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/IMG_3865-Large_1IMG_3865-Large.webp 500w, images/IMG_3865-Large_1IMG_3865-Large.webp 800w, images/IMG_3865-Large_1IMG_3865-Large.webp 1080w, images/IMG_3865-Large_1.webp 1280w" alt="" src="images/IMG_3865-Large_1.webp" loading="eager" class="background-image">
+              <div class="image-overlay"></div><img sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/IMG_3865-Large_1IMG_3865-Large.webp 500w, images/IMG_3865-Large_1IMG_3865-Large.webp 800w, images/IMG_3865-Large_1IMG_3865-Large.webp 1080w, images/IMG_3865-Large_1.webp 1280w" alt="Vidl Companies office" src="images/IMG_3865-Large_1.webp" loading="eager" class="background-image">
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- FOOTER -->
     <article id="Footer" class="footer">
       <div class="container footer-contain">
         <div class="_12-column-grid right-aligned fix-column">
           <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f1e-d7eb9f1b" class="footer-list-wrapper full-mob">
-            <a href="index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="" src="images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
+            <a href="index.html" class="component-heading-wrapper footer-logo-link w-inline-block"><img sizes="(max-width: 4109px) 100vw, 4109px" srcset="images/VIDLCOMPANY-p-500.png 500w, images/VIDLCOMPANY-p-800.png 800w, images/VIDLCOMPANY-p-1080.png 1080w, images/VIDLCOMPANY-p-1600.png 1600w, images/VIDLCOMPANY-p-2000.png 2000w, images/VIDLCOMPANY.webp 4109w" alt="Vidl Companies logo" src="images/VIDLCOMPANY.webp" loading="lazy" class="footer-logo"></a>
             <div class="small-text neutral">
-              <p class="paragraph medium-text left-aligned">Committed to Crafting the Extraordinary <br>Let’s build something phenomenal together</p>
+              <p class="paragraph medium-text left-aligned">Strategic Real Estate &amp; Brand Expansion<br>for Experiential Retail</p>
             </div>
           </div>
           <div id="w-node-_80fb9def-578b-bc91-d358-37b1d7eb9f3e-d7eb9f1b" class="footer-list-wrapper mobile-footer hide">
@@ -943,17 +1035,7 @@
             <a href="#" class="minimal-button w-inline-block">
               <div class="button-content-wrapper">
                 <div class="button-content">
-                  <div class="medium-text neutral-light">Location 1</div>
-                  <div class="underline">
-                    <div class="line-fill"></div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="minimal-button w-inline-block">
-              <div class="button-content-wrapper">
-                <div class="button-content">
-                  <div class="medium-text neutral-light">Location 2</div>
+                  <div class="medium-text neutral-light">Scottsdale, AZ</div>
                   <div class="underline">
                     <div class="line-fill"></div>
                   </div>
@@ -976,20 +1058,20 @@
                   </div>
                 </div>
               </a>
-              <a href="portfolio.html" class="minimal-button hide w-inline-block">
+              <a href="about.html" class="minimal-button w-inline-block">
                 <div class="button-content-wrapper">
                   <div class="button-content">
-                    <div class="medium-text neutral-light">Portfolio</div>
+                    <div class="medium-text neutral-light">About</div>
                     <div class="underline">
                       <div class="line-fill"></div>
                     </div>
                   </div>
                 </div>
               </a>
-              <a href="about.html" class="minimal-button w-inline-block">
+              <a href="services.html" class="minimal-button w-inline-block">
                 <div class="button-content-wrapper">
                   <div class="button-content">
-                    <div class="medium-text neutral-light">About</div>
+                    <div class="medium-text neutral-light">Services</div>
                     <div class="underline">
                       <div class="line-fill"></div>
                     </div>
@@ -1031,10 +1113,10 @@
               <div class="margin-bottom extra-small">
                 <div class="small-text neutral">SOCIAL</div>
               </div>
-              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+              <a href="https://www.instagram.com/andrewlaporte/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="Arrow icon" class="social-link-icon">
                 <div class="button-link-text whiite">Instagram</div>
               </a>
-              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="" class="social-link-icon">
+              <a href="https://www.linkedin.com/in/andrew-laporte-951349a6/" target="_blank" class="social-link w-inline-block"><img loading="lazy" src="images/Arrow-Right.svg" alt="Arrow icon" class="social-link-icon">
                 <div class="button-link-text whiite">Linkedin</div>
               </a>
             </div>
@@ -1062,12 +1144,12 @@
                   </div>
                 </a>
               </div>
-              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab854-d7eb9f1b" class="small-footer-text">©2026. All rights reserved</div>
+              <div id="w-node-_9fe3036e-defc-751e-2285-3b439a4ab854-d7eb9f1b" class="small-footer-text">&copy;2026. All rights reserved</div>
             </div>
           </div>
           <div class="footer-bottom-bar footer-disclaimer">
             <div class="footer-block disclaimer-bottom">
-              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to Vīdl’s CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
+              <div class="small-footer-text disclaimer">Vidl Companies LLC and its direct affiliates are actively practicing real estate brokerage through FranReal LLC, with the Designated Broker being Ty Brewster (BR626573000). All information herein is being performed within compliance of the Arizona Department of Real Estate. Please reach out to V&#299;dl's CEO, Andrew LaPorte, at (<a href="mailto:andrew@vidlcompanies.com" class="disclaimer-link">andrew@vidlcompanies.com</a>) with any questions.</div>
             </div>
           </div>
         </div>
@@ -1077,18 +1159,16 @@
   <div style="opacity:1;display:flex" class="loader">
     <div class="code-embed w-embed">
       <style>
-/* Loader (spinner) */
 .loading-circle {
-    border: 4px solid rgba(243, 243, 243, 0.6); /* Thinner border */
+    border: 4px solid rgba(243, 243, 243, 0.6);
     border-radius: 50%;
-    border-top: 6px solid #A02e2b; /* Thinner top border for the spinner */
+    border-top: 6px solid #A02e2b;
     width: 80px;
     height: 80px;
-    animation: spin 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; /* Slower and smoother animation */
-    box-shadow: 0 0 25px rgba(160, 46, 43, 0.5); /* Glowing effect matching your color */
+    animation: spin 2.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    box-shadow: 0 0 25px rgba(160, 46, 43, 0.5);
     transition: box-shadow 0.5s ease-in-out;
 }
-/* Spinner animation */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -1097,13 +1177,12 @@
         transform: rotate(360deg);
     }
 }
-</style>
+      </style>
+      <div class="loading-circle"></div>
     </div>
-    <div class="logo-wrap"><img src="images/Small-logo-white.webp" loading="eager" style="filter:blur(3px)" alt="" class="loader-image"></div>
-    <div class="loading-circle"></div>
   </div>
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.23/bundled/lenis.min.js"></script>
-  
+
   <script src="js/site.js"></script>
 </body>
 </html>
