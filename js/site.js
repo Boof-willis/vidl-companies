@@ -9,9 +9,9 @@
 
   // ─── Feature Detection ───
   const html = document.documentElement;
-  html.classList.add("w-mod-js");
+  html.classList.add("mod-js");
   if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
-    html.classList.add("w-mod-touch");
+    html.classList.add("mod-touch");
   }
 
   // ─── Lenis Smooth Scroll (desktop only) ───
@@ -535,7 +535,7 @@
 
   // ─── Video Background ───
   function initBackgroundVideo() {
-    var videoContainers = document.querySelectorAll(".w-background-video");
+    var videoContainers = document.querySelectorAll(".bg-video");
     videoContainers.forEach(function (container) {
       var video = container.querySelector("video");
       if (!video) return;
@@ -550,7 +550,7 @@
 
   // ─── Password Page (401) ───
   function initPasswordPage() {
-    var passForm = document.querySelector(".w-password-page form");
+    var passForm = document.querySelector(".password-page form");
     if (!passForm) return;
     // Remove legacy auth endpoint
     passForm.removeAttribute("action");
