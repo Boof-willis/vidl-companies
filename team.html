@@ -77,16 +77,16 @@
 .vidl-team-section {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 10rem 2rem 6rem;
+  padding: clamp(6rem, 15vh, 10rem) clamp(1rem, 5vw, 2rem) clamp(4rem, 10vh, 6rem);
 }
 .vidl-team-header {
-  margin-bottom: 6rem;
+  margin-bottom: clamp(3rem, 8vh, 6rem);
   border-bottom: 1px solid rgba(29,29,29,0.1);
-  padding-bottom: 2rem;
+  padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
 }
 .vidl-team-heading {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
   color: var(--primary--charcoal, #1d1d1d);
   margin: 1rem 0 0 0;
@@ -96,17 +96,17 @@
 .vidl-team-leadership {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
-  margin-bottom: 6rem;
+  gap: clamp(4rem, 10vh, 8rem);
+  margin-bottom: clamp(4rem, 10vh, 6rem);
 }
 .vidl-team-member {
   display: grid;
-  grid-template-columns: 4.5fr 7.5fr;
-  gap: 5rem;
-  align-items: start;
+  grid-template-columns: 4fr 8fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
 }
 .vidl-team-member:nth-child(even) {
-  grid-template-columns: 7.5fr 4.5fr;
+  grid-template-columns: 8fr 4fr;
 }
 .vidl-team-member:nth-child(even) .vidl-team-photo-wrap {
   grid-column: 2;
@@ -120,7 +120,7 @@
 .vidl-team-photo-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -141,44 +141,46 @@
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  max-width: 600px;
 }
 .vidl-team-info {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 3vh, 1.5rem);
 }
 .vidl-team-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 500;
   color: var(--primary--charcoal, #1d1d1d);
   margin: 0;
   letter-spacing: -0.01em;
 }
 .vidl-team-role {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-color--neutral-darker, #666);
-  margin-bottom: 1rem;
+  color: #a02e2b;
+  margin-bottom: clamp(0.5rem, 2vh, 1rem);
 }
 .vidl-team-excerpt {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 1.05rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.6;
+  font-weight: 400;
   color: var(--text-color--neutral-darker, #444);
-  margin: 0.5rem 0 1.5rem 0;
+  margin: 0.5rem 0 clamp(1rem, 3vh, 1.5rem) 0;
 }
 .vidl-team-bio-toggle {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   align-self: flex-start;
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -220,18 +222,19 @@
   margin-top: 1.5rem;
 }
 .vidl-team-bio p {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1.8;
+  font-weight: 400;
   color: var(--text-color--neutral-darker, #555);
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 clamp(1rem, 2vh, 1.25rem) 0;
 }
 .vidl-team-bio p:last-of-type {
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 2.5vh, 1.5rem);
 }
 .vidl-team-linkedin {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -250,13 +253,13 @@
 /* Additional team members (compact) */
 .vidl-team-additional {
   border-top: 1px solid rgba(29,29,29,0.1);
-  padding-top: 4rem;
+  padding-top: clamp(2.5rem, 6vh, 4rem);
   max-width: 100%;
 }
 .vidl-team-member-compact {
   display: grid;
   grid-template-columns: 120px 1fr;
-  gap: 3rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
   align-items: start;
 }
 .vidl-team-compact-placeholder {
@@ -270,63 +273,63 @@
 }
 .vidl-team-name-sm {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 500;
   color: var(--primary--charcoal, #1d1d1d);
   margin: 0 0 0.25rem 0;
   letter-spacing: -0.01em;
 }
 .vidl-team-role-sm {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.05em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 0.85rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-color--neutral-darker, #666);
-  margin-bottom: 1rem;
+  color: #a02e2b;
+  margin-bottom: clamp(0.5rem, 2vh, 1rem);
 }
 .vidl-team-excerpt-sm {
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 0.95rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
   line-height: 1.6;
+  font-weight: 400;
   color: var(--text-color--neutral-darker, #555);
   margin: 0.5rem 0 1rem 0;
 }
 
 @media (max-width: 991px) {
   .vidl-team-member {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
   .vidl-team-member:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .vidl-team-member:nth-child(even) .vidl-team-photo-wrap,
+  .vidl-team-member:nth-child(even) .vidl-team-text {
+    grid-column: 1;
+    grid-row: auto;
   }
 }
 
 @media (max-width: 767px) {
-  .vidl-team-section {
-    padding: 8rem 1rem 4rem;
-  }
-  .vidl-team-heading {
-    font-size: 2rem;
-  }
   .vidl-team-leadership {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
   }
   .vidl-team-member,
   .vidl-team-member:nth-child(even) {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .vidl-team-photo-wrap {
     width: 100%;
   }
   .vidl-team-member-compact {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .vidl-team-compact-placeholder {
     width: 100px;
