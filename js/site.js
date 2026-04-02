@@ -449,8 +449,8 @@
         }
       });
 
-      // Send to Cloudflare Worker endpoint
-      fetch("/api/contact", {
+      // Send to webhook
+      fetch("https://services.leadconnectorhq.com/hooks/3sxvBJBag9Zl9EoIj09P/webhook-trigger/82a63cea-90d5-469c-8c13-21d3dfee085f", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

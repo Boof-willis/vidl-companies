@@ -9,6 +9,8 @@
   <meta content="Vidl Companies is a boutique real estate and strategic advisory firm focused on experiential brands. Tenant representation, site selection, brand expansion, and development across Arizona and national markets." property="twitter:description">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
+  <meta property="og:image" content="https://vidl-companies.pages.dev/images/vidl-og-image.png">
+  <meta name="twitter:image" content="https://vidl-companies.pages.dev/images/vidl-og-image.png">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link rel="canonical" href="https://vidl-companies.pages.dev/">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -106,6 +108,31 @@
 .is-home .navigation.nav-scrolled .nav-text,
 .is-home .navigation.nav-scrolled .mobile-menu-text {
   color: var(--primary--black, #0f0f0f);
+}
+
+/* ─── Hero Logo ─── */
+.hero-vidl-logo {
+  width: 40vw;
+  max-width: 600px;
+  min-width: 220px;
+  height: auto;
+  margin: 0 auto -0.5rem auto;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .hero-vidl-logo {
+    width: 38vw;
+  }
+}
+@media (max-width: 991px) {
+  .hero-vidl-logo {
+    width: 55vw;
+  }
+}
+@media (max-width: 479px) {
+  .hero-vidl-logo {
+    width: 70vw;
+  }
 }
 
 /* ─── Hero CTA ─── */
@@ -629,47 +656,141 @@
     <!-- SECTION 1: HERO -->
     <div class="hero-section-wrapper">
       <section class="hero-section">
-        <div id="bgVideo" class="hero-content-wrapper">
-          <div class="hero-content hero-centered-mobile" style="align-items: center; text-align: center; height: auto; min-height: 75vh; justify-content: center; gap: 0.5rem; padding-top: 60px; position: relative; z-index: 10;">
-            <div class="hero-top-new" style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-              <div class="medium-text hero-top-text" style="font-size: 0.7rem; letter-spacing: 0.25em; opacity: 0.8; color: #fdfdfd; text-transform: uppercase;">CRAFT THE EXTRAORDINARY // EXPERIENCE THE PHENOMENAL</div>
-            </div>
-            <div class="hero-bottom flex-vertical" style="align-items: center; width: 100%; max-width: 1200px; gap: 0.5rem;">
-              <div style="width: 100%; text-align: center; position: relative; z-index: 100;">
-                <div>
-                  <div>
-                    <img alt="Vidl Companies Logo" src="images/VIDLCOMPANY.webp" style="width: 80%; max-width: 1000px; height: auto; margin: 0 auto -0.5rem auto; display: block;">
-                    <h1 class="display-heading" style="font-family:'Montserrat',sans-serif;font-size:clamp(1.2rem, 2.5vw, 1.8rem);font-weight:500;line-height:1.4;color:#fdfdfd;margin:0 auto 0 auto; max-width: 900px; letter-spacing: 0.02em; text-transform: none;">Strategic Real Estate &amp; Brand Expansion for Experiential Retail</h1>
-                  </div>
+        <style>
+          .vidl-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(15, 15, 15, 0.3) 0%, rgba(15, 15, 15, 0.8) 100%);
+            z-index: 1;
+            pointer-events: none;
+          }
+          .vidl-hero-content-box {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            height: 100vh;
+            min-height: 600px;
+            box-sizing: border-box;
+            justify-content: center;
+          }
+          .vidl-hero-top-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(253, 253, 253, 0.7);
+            margin-bottom: clamp(0.5rem, 2vh, 1rem);
+            animation: fadeInDown 1s ease forwards;
+          }
+          .vidl-hero-logo-img {
+            width: 100%;
+            max-width: clamp(280px, 45vw, 550px);
+            margin-bottom: clamp(0.5rem, 2vh, 1rem);
+            filter: drop-shadow(0px 8px 24px rgba(0,0,0,0.4));
+            animation: fadeIn 1.2s ease forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+          }
+          .vidl-hero-h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.25rem, 3vw, 2.25rem);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.35;
+            color: #fdfdfd;
+            max-width: 900px;
+            margin: 0 0 clamp(0.75rem, 2.5vh, 1.5rem) 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+          }
+          .vidl-hero-p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            font-weight: 400;
+            line-height: 1.7;
+            color: rgba(253, 253, 253, 0.85);
+            max-width: 720px;
+            margin: 0 0 clamp(1rem, 3vh, 2rem) 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.8s;
+            opacity: 0;
+          }
+          .vidl-hero-cta {
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 1s;
+            opacity: 0;
+          }
+          
+          @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+          }
+          
+          @media (max-width: 767px) {
+            .vidl-hero-content-box {
+              padding: 8rem 1.5rem 4rem;
+            }
+            .vidl-hero-logo-img {
+              max-width: 80%;
+            }
+            .vidl-hero-h1 {
+              font-size: 1.5rem;
+            }
+            .vidl-hero-p {
+              font-size: 1.05rem;
+            }
+            .vidl-hero-top-label {
+              font-size: 0.7rem;
+              letter-spacing: 0.2em;
+            }
+          }
+        </style>
+        
+        <div id="bgVideo" class="vidl-hero-content-box">
+          <div class="vidl-hero-top-label">CRAFT THE EXTRAORDINARY // EXPERIENCE THE PHENOMENAL</div>
+          <img alt="Vidl Companies Logo" src="images/VIDLCOMPANY.webp" class="vidl-hero-logo-img">
+          <h1 class="vidl-hero-h1">Strategic Real Estate &amp; Brand Expansion for Experiential Retail</h1>
+          <p class="vidl-hero-p">We partner with brands, landlords, and developers to secure premier placements, scale physical presence, and execute high-impact real estate strategies across Arizona and key national markets.</p>
+          
+          <div class="vidl-hero-cta">
+            <a href="contact.html" class="secondary-button w-inline-block">
+              <div class="medium-text neutral-light">Start a Conversation</div>
+              <div class="button-icon-circle white">
+                <div class="button-icon-wrapper">
+                  <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                  <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
                 </div>
               </div>
-              <p class="hero-subline" style="text-align: center; margin: 0 auto 0 auto; max-width: 700px; font-size: 1.05rem; opacity: 0.85; line-height: 1.6;">We partner with brands, landlords, and developers to secure premier placements, scale physical presence, and execute high-impact real estate strategies across Arizona and key national markets.</p>
-            </div>
-            <div class="hero-cta" style="align-self: center; margin-top: 1.5rem;">
-              <a href="contact.html" class="secondary-button w-inline-block">
-                <div class="medium-text neutral-light">Start a Conversation</div>
-                <div class="button-icon-circle white">
-                  <div class="button-icon-wrapper">
-                    <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg></div>
-                    <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg></div>
-                  </div>
-                </div>
-              </a>
-            </div>
+            </a>
           </div>
         </div>
+        
         <div class="hero-image-wrapper">
           <div data-poster-url="videos/vidl-home-poster-00001.jpg" data-video-urls="videos/vidl-home-transcode.mp4,videos/vidl-home-transcode.webm" data-autoplay="true" data-loop="true" class="hero-image w-background-video w-background-video-atom"><video id="60e8a8ca-313e-3994-1121-73358338afe6-video" autoplay="" loop="" style="background-image:url(&quot;videos/vidl-home-poster-00001.jpg&quot;)" muted="" playsinline="" data-object-fit="cover">
               <source src="videos/vidl-home-transcode.mp4">
               <source src="videos/vidl-home-transcode.webm">
             </video></div>
-          <div class="image-overlay" style="background-color: rgba(0,0,0,0.6); z-index: 2; pointer-events: none;"></div>
+          <div class="vidl-hero-overlay"></div>
         </div>
       </section>
       <div class="spacer"></div>
@@ -689,9 +810,9 @@
                 </div>
               </div>
               <div class="editorial-col-right animation-left-0-2 services-cta">
-                <div class="extra-large-text dark-text" style="margin-bottom:1.5rem;">V&#299;dl Companies is a boutique real estate and strategic advisory firm focused on experiential brands and high-quality retail environments.</div>
-                <div class="medium-text" style="margin-bottom:1.25rem;">We operate at the intersection of real estate, brand positioning, and growth strategy, helping clients expand intentionally, secure the right locations, and build long-term value through physical presence.</div>
-                <div class="medium-text" style="margin-bottom:4rem;">With deep market expertise in Arizona and a national network of relationships, we bring clarity, alignment, and execution to every engagement.</div>
+                <div class="extra-large-text dark-text" style="margin-bottom:0.5rem;">V&#299;dl Companies is a boutique real estate and strategic advisory firm focused on experiential brands and high-quality retail environments.</div>
+                <div class="extra-large-text dark-text" style="margin-bottom:0.5rem;">We operate at the intersection of real estate, brand positioning, and growth strategy, helping clients expand intentionally, secure the right locations, and build long-term value through physical presence.</div>
+                <div class="extra-large-text dark-text" style="margin-bottom:4rem;">With deep market expertise in Arizona and a national network of relationships, we bring clarity, alignment, and execution to every engagement.</div>
                 
                 <div class="vidl-stats-grid">
                   <div class="vidl-stat-item" style="padding: 0; text-align: left;">
@@ -730,7 +851,7 @@
                 </div>
               </div>
               <div class="editorial-col-right animation-left-0-2">
-                <div class="medium-text" style="margin-bottom: 5rem;">Vidl aligns with and has represented an array of visionary brands, innovators, and leaders across retail, wellness, lifestyle, hospitality, food and beverage, and entertainment uses crafting bespoke solutions that bring exceptional experiences to life. Some of which include:</div>
+                <div class="extra-large-text dark-text" style="margin-bottom: 5rem;">Vidl aligns with and has represented an array of visionary brands, innovators, and leaders across retail, wellness, lifestyle, hospitality, food and beverage, and entertainment uses crafting bespoke solutions that bring exceptional experiences to life. Some of which include:</div>
                 <div class="logos-wrapper wrap-mob">
                 <div class="logo-reveal">
                   <div class="logo-wrapper"><img src="images/3.webp" loading="lazy" sizes="(max-width: 613px) 100vw, 613px" srcset="images/3-p-500.png 500w, images/3.webp 613w" alt="Client logo" class="logo-image"></div>
@@ -757,7 +878,7 @@
                   <div class="logo-wrapper"><img src="images/Untitled-design-36.png" loading="lazy" sizes="(max-width: 615px) 100vw, 615px" srcset="images/Untitled-design-36-p-500.png 500w, images/Untitled-design-36.png 615w" alt="Client logo" class="logo-image lifetime"></div>
                 </div>
                 <div class="logo-reveal">
-                  <div class="logo-wrapper"><img src="images/The-Workshop-Pilates_Logo.png" loading="lazy" sizes="(max-width: 1115px) 100vw, 1115px" srcset="images/The-Workshop-Pilates_Logo-p-500.png 500w, images/The-Workshop-Pilates_Logo-p-800.png 800w, images/The-Workshop-Pilates_Logo-p-1080.png 1080w, images/The-Workshop-Pilates_Logo.png 1115w" alt="The Workshop Pilates logo" class="logo-image filtered-logo contained-logo"></div>
+                  <div class="logo-wrapper"><img src="images/tach haus logo.webp" loading="lazy" alt="Tach Haus logo" class="logo-image contained-logo"></div>
                 </div>
                 <div class="logo-reveal">
                   <div class="logo-wrapper"><img src="images/WePellet_Logo.png" loading="lazy" alt="WePellet logo" class="logo-image filtered-logo contained-logo"></div>
@@ -885,23 +1006,6 @@
                 </div>
               </div>
             </div>
-            <div class="animation-left-0-2" style="margin-top:2.5rem;">
-              <a href="services.html" class="secondary-button left-align w-inline-block">
-                <div class="large-text">View Services</div>
-                <div class="button-icon-circle">
-                  <div class="button-icon-wrapper">
-                    <div style="-webkit-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="arrow-icon hover w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg></div>
-                    <div class="arrow-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg></div>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -909,110 +1013,237 @@
       <!-- SECTION 6 & 7: DIFFERENTIATION & MARKET FOCUS -->
       <section>
         <style>
-          .vidl-edge-card {
-            max-width: 680px; 
-            padding: 4.5rem; 
-            background: rgba(15, 15, 15, 0.45); 
-            backdrop-filter: blur(16px); 
-            -webkit-backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255,255,255,0.08); 
-            border-radius: 2px;
+          .vidl-edge-section {
+            position: relative;
+            padding: 10rem 0; /* Generous padding */
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
           }
+          .vidl-edge-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 45% 55%; /* Two-column layout */
+          }
+          .vidl-edge-text-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 4rem; /* Breathing room before empty space */
+          }
+          
+          /* Typography Updates */
+          .vidl-edge-hook {
+            color: #fdfdfd; 
+            margin-bottom: 4rem; 
+            font-size: 2.75rem; /* Larger hook */
+            line-height: 1.2; 
+            font-weight: 500; /* More weight */
+            letter-spacing: -0.02em;
+          }
+          .vidl-edge-subheading {
+            color: #fdfdfd; 
+            font-size: 1.65rem; 
+            font-weight: 600; /* Bold weight */
+            margin-bottom: 1.25rem; 
+            letter-spacing: -0.01em;
+          }
+          .vidl-edge-paragraph {
+            color: rgba(253, 253, 253, 0.85); 
+            font-size: 1.15rem; 
+            line-height: 1.7; 
+            margin-bottom: 4rem; /* Spacing between points */
+          }
+          .vidl-edge-locations {
+            color: rgba(253, 253, 253, 0.65); /* Subtle color shift */
+          }
+          .vidl-edge-locations span {
+            color: rgba(253, 253, 253, 1); /* Brighter for actual names */
+          }
+          
+          /* Gradient overlay defaults to desktop (dark left, clear right) */
+          .vidl-edge-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.8) 35%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 0) 100%);
+            z-index: 1;
+          }
+          
+          @media (max-width: 991px) {
+            .vidl-edge-container {
+              grid-template-columns: 65% 35%;
+            }
+            .vidl-edge-overlay {
+              background: linear-gradient(to right, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(10, 10, 10, 0.4) 80%, rgba(10, 10, 10, 0) 100%);
+            }
+          }
+          
           @media (max-width: 767px) {
-            .vidl-edge-card {
-              padding: 2rem;
+            .vidl-edge-section {
+              padding: 6rem 0;
+            }
+            .vidl-edge-container {
+              grid-template-columns: 1fr; /* Stacks on mobile */
+            }
+            .vidl-edge-text-col {
+              padding-right: 0;
+            }
+            .vidl-edge-hook {
+              font-size: 2.25rem;
+              margin-bottom: 3rem;
+            }
+            /* Darken the entire background on mobile for legibility */
+            .vidl-edge-overlay {
+              background: rgba(10, 10, 10, 0.85); 
             }
           }
         </style>
-        <div class="animation-fade-in">
-          <div class="image-wrapper-content" style="padding: 10rem 0; min-height: 90vh; display: flex; align-items: center;">
-            <div class="container" style="position: relative; z-index: 10; width: 100%;">
-              <div class="section-content" style="display: flex; justify-content: flex-start;">
-                
-                <div class="vidl-edge-card animation-up-0-2">
-                  <div class="label-wrapper" style="margin-bottom: 2rem;">
-                    <div class="label-dot white"></div>
-                    <div class="bullet-text" style="color: rgba(253, 253, 253, 0.9);">The V&#299;dl Edge</div>
-                  </div>
-                  
-                  <h2 class="extra-large-text" style="color: #fdfdfd; margin-bottom: 3.5rem; font-size: 2.25rem; line-height: 1.25; font-weight: 400;">We approach real estate as a strategic growth lever, not a transaction.</h2>
-                  
-                  <div class="vidl-diff-content">
-                    <div class="vidl-diff-block" style="border-top: 1px solid rgba(253, 253, 253, 0.15); padding-top: 2rem; margin-bottom: 2.5rem;">
-                      <h3 class="vidl-diff-title" style="color: #fdfdfd; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;">Strategic Alignment</h3>
-                      <p class="vidl-diff-desc" style="color: rgba(253, 253, 253, 0.85); font-size: 1.05rem; line-height: 1.6;">We work with clients who understand that where and how you show up physically matters. We prioritize selective partnerships over volume, ensuring perfect alignment between brand, location, and timing.</p>
-                    </div>
-                    
-                    <div class="vidl-diff-block" style="border-top: 1px solid rgba(253, 253, 253, 0.15); padding-top: 2rem;">
-                      <h3 class="vidl-diff-title" style="color: #fdfdfd; font-size: 1.5rem; font-weight: 500; margin-bottom: 0.75rem;">National Reach</h3>
-                      <p class="vidl-diff-desc" style="color: rgba(253, 253, 253, 0.85); font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.5rem;">Based in Arizona with strong ties to Scottsdale and Phoenix, our national relationships allow us to execute efficiently across major U.S. markets. We focus on long-term value, not short-term wins.</p>
-                      
-                      <div class="vidl-market-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0;">
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Scottsdale</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Phoenix</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Los Angeles</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Miami</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Dallas</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Austin</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Chicago</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Nashville</span>
-                        <span class="vidl-market-tag" style="color: rgba(253, 253, 253, 0.9); border: 1px solid rgba(253, 253, 253, 0.25); font-size: 0.75rem; padding: 0.35rem 0.8rem; border-radius: 100px;">Denver</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+        
+        <div class="vidl-edge-section animation-fade-in">
+          <div class="container vidl-edge-container">
+            <div class="vidl-edge-text-col animation-up-0-2">
+              <div class="label-wrapper" style="margin-bottom: 2.5rem;">
+                <div class="label-dot white"></div>
+                <div class="bullet-text" style="color: rgba(253, 253, 253, 0.9);">The V&#299;dl Edge</div>
               </div>
+              
+              <h2 class="vidl-edge-hook">We approach real estate as a strategic growth lever, not a transaction.</h2>
+              
+              <div class="vidl-diff-block">
+                <h3 class="vidl-edge-subheading">Strategic Alignment</h3>
+                <p class="vidl-edge-paragraph">We work with clients who understand that where and how you show up physically matters. We prioritize selective partnerships over volume, ensuring perfect alignment between brand, location, and timing.</p>
+              </div>
+              
+              <div class="vidl-diff-block">
+                <h3 class="vidl-edge-subheading">National Reach. Arizona Roots.</h3>
+                <p class="vidl-edge-paragraph" style="margin-bottom: 1.5rem;">Headquartered in Arizona with deep ties throughout major submarkets such as Scottsdale and Gilbert, our foundation is local, but our execution is national. We operate seamlessly across major U.S. markets, with established relationships and active deal flow throughout <span class="vidl-edge-locations"><span>Texas</span>, <span>Florida</span>, <span>California</span>, <span>Utah</span>, <span>Nevada</span>, <span>Chicago</span>, <span>Nashville</span>, <span>Denver</span>, <span>Atlanta</span>, <span>the Mid-Atlantic</span>, <span>the Carolinas</span>, <span>Seattle</span>, <span>New England</span></span>, and beyond.</p>
+                <p class="vidl-edge-paragraph" style="margin-bottom: 0;">We don't chase transactions. We build long-term value in the markets that matter.</p>
+              </div>
+              
             </div>
-            <div class="background-image-wrapper">
-              <div class="image-overlay" style="background: linear-gradient(to right, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0.6) 40%, rgba(15, 15, 15, 0.1) 100%);"></div>
-              <img src="images/Untitled-design-11-p-3200.jpg" loading="lazy" alt="The Vidl Edge" class="background-image" style="object-position: center;">
-            </div>
+            
+            <!-- Empty right column for background image visibility -->
+            <div></div>
+            
+          </div>
+          
+          <div class="background-image-wrapper">
+            <div class="vidl-edge-overlay"></div>
+            <img src="images/Untitled-design-11-p-3200.jpg" loading="lazy" alt="The Vidl Edge" class="background-image" style="object-position: center;">
           </div>
         </div>
       </section>
 
       <!-- SECTION 9: FINAL CTA -->
       <section>
-        <div style="-webkit-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 32px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-fade-in">
-          <div class="image-wrapper-content">
-            <div style="-webkit-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 20px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="animation-up-0-1">
-              <div class="center-align">
-                <div class="label-wrapper">
-                  <div class="label-dot white"></div>
-                  <div class="small-text cta-top-text">Building Something Intentional?</div>
+        <style>
+          .vidl-cta-section {
+            position: relative;
+            padding: 10rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            overflow: hidden;
+          }
+          .vidl-cta-card {
+            position: relative;
+            z-index: 10;
+            max-width: 940px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 6rem 4rem;
+            background: rgba(15, 15, 15, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .vidl-cta-label-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+          }
+          .vidl-cta-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: rgba(253, 253, 253, 0.9);
+            padding-top: 0;
+          }
+          .vidl-cta-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.35;
+            color: #fdfdfd;
+            margin: 0 0 4rem 0;
+            max-width: 800px;
+          }
+          .vidl-cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 10, 10, 0.4);
+            z-index: 1;
+          }
+          @media (max-width: 991px) {
+            .vidl-cta-heading {
+              font-size: 2rem;
+            }
+          }
+          @media (max-width: 767px) {
+            .vidl-cta-section {
+              padding: 6rem 0;
+            }
+            .vidl-cta-card {
+              padding: 3.5rem 2rem;
+              width: 92%;
+            }
+            .vidl-cta-heading {
+              font-size: 1.75rem;
+              margin: 0 0 3.5rem 0;
+            }
+          }
+        </style>
+        <div class="vidl-cta-section animation-fade-in">
+          <div class="vidl-cta-card animation-up-0-2">
+            <div class="vidl-cta-label-wrapper">
+              <div class="label-dot white"></div>
+              <div class="vidl-cta-label">Building Something Intentional?</div>
+            </div>
+            
+            <h2 class="vidl-cta-heading">Whether you're scaling a brand, leasing a flagship location, or developing a retail environment, we bring the strategy and execution to get it right.</h2>
+            
+            <a href="contact.html" class="secondary-button w-inline-block">
+              <div class="medium-text neutral-light">Start a Conversation</div>
+              <div class="button-icon-circle white">
+                <div class="button-icon-wrapper">
+                  <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
+                  <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></div>
                 </div>
               </div>
-            </div>
-            <div class="animation-up-0-2 center-content">
-              <div class="margin-bottom medium">
-                <div class="display-heading-wrapper">
-                  <div class="overflow-hide">
-                    <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="display-font-wrapper">
-                      <h2 class="cta-text" style="font-size:clamp(1.25rem,2.5vw,1.75rem);font-weight:400;line-height:1.7;max-width:700px;margin:0 auto;">Whether you're scaling a brand, leasing a flagship location, or developing a retail environment, we bring the strategy and execution to get it right.</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="contact.html" class="secondary-button w-inline-block">
-                <div class="medium-text neutral-light">Start a Conversation</div>
-                <div class="button-icon-circle white">
-                  <div class="button-icon-wrapper">
-                    <div class="arrow-icon hover white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg></div>
-                    <div class="arrow-icon white w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                      </svg></div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="background-image-wrapper">
-              <div class="image-overlay"></div><img sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/IMG_3865-Large_1IMG_3865-Large.webp 500w, images/IMG_3865-Large_1IMG_3865-Large.webp 800w, images/IMG_3865-Large_1IMG_3865-Large.webp 1080w, images/IMG_3865-Large_1.webp 1280w" alt="Vidl Companies office" src="images/IMG_3865-Large_1.webp" loading="eager" class="background-image">
-            </div>
+            </a>
+          </div>
+          
+          <div class="background-image-wrapper" style="z-index: 0;">
+            <div class="vidl-cta-overlay"></div>
+            <img sizes="(max-width: 1280px) 100vw, 1280px" srcset="images/IMG_3865-Large_1IMG_3865-Large.webp 500w, images/IMG_3865-Large_1IMG_3865-Large.webp 800w, images/IMG_3865-Large_1IMG_3865-Large.webp 1080w, images/IMG_3865-Large_1.webp 1280w" alt="Vidl Companies office" src="images/IMG_3865-Large_1.webp" loading="eager" class="background-image">
           </div>
         </div>
       </section>
@@ -1062,16 +1293,6 @@
                 <div class="button-content-wrapper">
                   <div class="button-content">
                     <div class="medium-text neutral-light">About</div>
-                    <div class="underline">
-                      <div class="line-fill"></div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="services.html" class="minimal-button w-inline-block">
-                <div class="button-content-wrapper">
-                  <div class="button-content">
-                    <div class="medium-text neutral-light">Services</div>
                     <div class="underline">
                       <div class="line-fill"></div>
                     </div>
