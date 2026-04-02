@@ -2699,13 +2699,13 @@ figcaption {
 
 .section-4 {
   background-color: #0000;
-  background-image: url('../images/Untitled-design-7_1.webp');
+  background-image: url('../images/bg-texture-dark.webp');
   background-position: 0 0;
   background-size: auto;
 }
 
 .section-4.mission {
-  background-image: linear-gradient(#ffffff80, #ffffff80), url('../images/Untitled-design-8_1.avif');
+  background-image: linear-gradient(#ffffff80, #ffffff80), url('../images/bg-texture-light.webp');
   background-position: 0 0, 50%;
   background-size: auto, 110%;
   display: block;
@@ -2713,7 +2713,7 @@ figcaption {
 
 .section-4.vidl-section {
   aspect-ratio: 15 / 12;
-  background-image: url('../images/Untitled-design-11.jpg');
+  background-image: url('../images/vidl-edge-bg-full.webp');
   background-position: 50% 100%;
   background-size: cover;
   width: 100%;
@@ -4258,7 +4258,7 @@ figcaption {
   }
 
   .section-4.vidl-section {
-    background-image: linear-gradient(#ffffff80, #ffffff80), url('../images/Untitled-design-11.jpg');
+    background-image: linear-gradient(#ffffff80, #ffffff80), url('../images/vidl-edge-bg-full.webp');
     background-position: 0 0, 50% 100%;
     background-size: auto, cover;
   }
